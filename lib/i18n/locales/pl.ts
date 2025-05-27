@@ -1,27 +1,15 @@
 const pl = {
   common: {
     callNow: "Zadzwoń teraz",
-    bookNow: "Zarezerwuj",
-    sendMessage: "Wyślij wiadomość",
     chooseMethod: "Wybierz metodę",
     chooseMethodDescription:
-      "Wybierz preferowany sposób wysłania żądania rezerwacji",
+      "Wybierz preferowany sposób wysłania żądania rezerwacji.",
     whatsapp: "WhatsApp (Zalecane)",
     sms: "SMS",
-    name: "Imię",
-    message: "Wiadomość",
-    yourName: "Twoje imię",
-    howCanWeHelp: "Jak możemy Ci pomóc?",
-    loading: "Ładowanie...",
-    error: "Błąd",
-    success: "Sukces",
   },
   nav: {
     home: "Strona główna",
     about: "O Nas",
-    services: "Usługi",
-    areas: "Obszary",
-    pricing: "Cennik",
     fleet: "Flota",
     testimonials: "Opinie",
     destinations: "Destynacje",
@@ -46,36 +34,31 @@ const pl = {
       luxurySedan: "do 4 osób (luksusowy sedan)",
       shuttle: "do 7 osób (shuttle)",
     },
-    selectDate: "Wybierz datę",
-    selectTime: "Wybierz godzinę",
     date: "Data",
     time: "Godzina",
     notesPlaceholder: "Dodaj specjalne życzenia lub notatki...",
     paymentInfo: "Akceptujemy płatności gotówką i kartą.",
     dateDialog: {
       title: "Wybierz Datę",
-      description: "Wybierz preferowaną datę podróży",
+      description: "Wybierz preferowaną datę podróży.",
     },
   },
   about: {
     title: "Twój zaufany partner transportowy w Dalmacji",
-    subtitle: "Doświadczenie i niezawodność",
     description:
-      "Witamy w Taxi Gagi, Twojej pierwszorzędnej usłudze transportowej w pięknym regionie Dalmacji. Z wieloletnim doświadczeniem w obsłudze mieszkańców i turystów, ustanowiliśmy się jako niezawodna i profesjonalna usługa taxi pokrywająca całe wybrzeże dalmatyńskie.",
+      "Witamy w Taxi Gagi, Twoim pierwszorzędnym serwisie transportowym w pięknym regionie Dalmacji. Z wieloletnim doświadczeniem w obsłudze mieszkańców i turystów, ustanowiliśmy się jako niezawodny i profesjonalny serwis taxi obsługujący całe wybrzeże dalmatyńskie.",
     paragraph1:
-      "Od historycznych ulic Zadaru po tętniący życiem Split, od wspaniałych Jezior Plitwickich po perłę Adriatyku - Dubrownik, nasza usługa obejmuje wszystkie główne destynacje regionu.",
+      "Od historycznych ulic Zadaru po tętniący życiem Split, od wspaniałych Jezior Plitwickich po perłę Adriatyku - Dubrownik, nasz serwis obejmuje wszystkie główne destynacje regionu.",
     paragraph2:
-      "Jesteśmy dumni z oferowania komfortowych, punktualnych i bezpiecznych usług transportowych, które zaspokajają wszystkie Twoje potrzeby podróżnicze.",
+      "Jesteśmy dumni z oferowania komfortowych, punktualnych i bezpiecznych usług transportowych, które spełniają wszystkie Twoje potrzeby podróżne.",
     paragraph3:
-      "Nasi profesjonalni kierowcy znają każdy zakątek Dalmacji i mogą zapewnić, że dotrzesz do celu bezpiecznie i na czas. Czy potrzebujesz transferu na lotnisko, jednodniowej wycieczki do Jezior Plitwickich, czy transportu do ulubionej destynacji dalmatyńskiej, jesteśmy tutaj, aby służyć Ci najwyższymi standardami obsługi klienta.",
+      "Nasi profesjonalni kierowcy znają każdy zakątek Dalmacji i mogą zapewnić, że dotrzesz do celu bezpiecznie i na czas. Czy potrzebujesz transferu na lotnisko, jednodniowej wycieczki do Jezior Plitwickich, czy transportu do Twojej ulubionej dalmatyńskiej destynacji, jesteśmy tutaj, aby służyć Ci z najwyższymi standardami obsługi klienta.",
   },
   fleet: {
     title: "Nasza Flota",
     subtitle:
-      "Wybierz idealny pojazd dla swoich potrzeb z naszej premium floty",
-    featuresLabel: "Cechy",
-    passengers: "Pasażerowie",
-    pricePerKm: "Od €{{price}}/km",
+      "Wybierz idealny pojazd dla swoich potrzeb z naszej premium floty.",
+    featuresLabel: "Cechy:",
     bookVehicle: "Zarezerwuj ten pojazd",
     tabs: {
       sedan: "Sedan",
@@ -105,6 +88,9 @@ const pl = {
       airportTransfers: "Transfery lotniskowe",
       cityTours: "Wycieczki po mieście",
       cashlessPayment: "Płatność bezgotówkowa",
+      comfortableSeating: "Wygodne siedzenia",
+      luggageSpace: "Miejsce na bagaż",
+      twentyFourSevenAvailability: "Dostępność 24/7",
       premiumInterior: "Premium wnętrze",
       climateControl: "Kontrola klimatu",
       perfectForGroups: "Idealny dla grup",
@@ -115,12 +101,15 @@ const pl = {
       priorityService: "Usługa priorytetowa",
       refreshmentsIncluded: "Napoje w cenie",
       professionalChauffeur: "Profesjonalny szofer",
+      temperatureControlledLeatherSeating:
+        "Skórzane fotele premium z kontrolą temperatury",
+      superiorRideComfort: "Doskonały komfort jazdy i prowadzenie",
     },
   },
   contact: {
     title: "Skontaktuj się z nami",
     subtitle:
-      "Masz pytania lub musisz zarezerwować przejazd? Skontaktuj się z nami przez jeden z naszych kanałów.",
+      "Masz pytania lub potrzebujesz zarezerwować przejazd? Skontaktuj się z nami przez jeden z naszych kanałów kontaktowych.",
     sendMessage: "Wyślij nam wiadomość",
     contactInfo: "Informacje kontaktowe",
     viewProfile: "Zobacz nasz profil biznesowy",
@@ -141,166 +130,157 @@ const pl = {
     },
     dialog: {
       title: "Wybierz metodę wiadomości",
-      description: "Wybierz preferowany sposób wysłania wiadomości",
+      description: "Wybierz preferowany sposób wysłania wiadomości.",
     },
   },
   testimonials: {
     title: "Co mówią nasi klienci",
     subtitle:
-      "Nie wierz tylko nam na słowo - posłuchaj naszych zadowolonych klientów o ich doświadczeniach z naszą usługą taxi.",
-    roles: {
-      businessTraveler: "Podróżnik biznesowy",
-      frequentFlyer: "Częsty podróżnik",
-      localResident: "Mieszkaniec lokalny",
-      corporateClient: "Klient korporacyjny",
-      tourist: "Turysta",
-      eventOrganizer: "Organizator wydarzeń",
-    },
+      "Nie wierz tylko nam na słowo - posłuchaj naszych zadowolonych klientów o ich doświadczeniu z naszym serwisem taxi.",
   },
   destinations: {
     title: "Odkryj Dalmację",
     subtitle:
-      "Odkrywaj najpiękniejsze destynacje w Dalmacji z naszym komfortowym serwisem transportowym",
+      "Odkrywaj najpiękniejsze destynacje w Dalmacji z naszym komfortowym serwisem transportowym.",
     categories: {
       nationalParks: "Parki Narodowe",
       natureParks: "Parki Przyrody",
       historicCities: "Miasta Historyczne",
-      beachDestinations: "Destynacje Plażowe",
       attractions: "Atrakcje",
     },
     nationalParks: {
       plitviceLakes: {
         name: "Jeziora Plitwickie",
         description:
-          "Obiekt dziedzictwa światowego UNESCO z 16 kaskadowymi jeziorami",
+          "Obiekt dziedzictwa światowego UNESCO z 16 kaskadowymi jeziorami.",
       },
       krka: {
         name: "Krka",
-        description: "Wspaniałe wodospady i klasztory wzdłuż rzeki Krka",
+        description: "Wspaniałe wodospady i klasztory wzdłuż rzeki Krka.",
       },
       paklenica: {
         name: "Paklenica",
-        description: "Dramatyczne kaniony i raj wspinaczkowy w Velebicie",
+        description: "Dramatyczne kaniony i raj wspinaczkowy w Velebicie.",
       },
       brijuni: {
         name: "Brijuni",
         description:
-          "Dziewiczy archipelag z bogatą fauną i rzymskim dziedzictwem",
+          "Dziewiczy archipelag z bogatą fauną i rzymskim dziedzictwem.",
       },
       kornati: {
         name: "Kornati",
         description:
-          "Wspaniały archipelag 89 wysp z unikalnym krajobrazem krasowym",
+          "Wspaniały archipelag 89 wysp z unikalnym krajobrazem krasowym.",
       },
       mljet: {
         name: "Mljet",
         description:
-          "Dziewiczy wyspiarski park narodowy ze słonymi jeziorami i starożytnym klasztorem",
+          "Dziewiczy wyspiarski park narodowy ze słonymi jeziorami i starożytnym klasztorem.",
       },
     },
     natureParks: {
       vranskoLake: {
         name: "Jezioro Vransko",
         description:
-          "Największe naturalne jezioro w Chorwacji, raj obserwacji ptaków",
+          "Największe naturalne jezioro w Chorwacji, raj obserwacji ptaków.",
       },
       velebit: {
         name: "Velebit",
         description:
-          "Największy łańcuch górski Chorwacji z różnorodną florą i fauną",
+          "Największy łańcuch górski Chorwacji z różnorodną florą i fauną.",
       },
       biokovo: {
         name: "Biokovo",
         description:
-          "Dramatyczny łańcuch górski nad Makarską ze wspaniałymi widokami na wybrzeże",
+          "Dramatyczny łańcuch górski nad Makarską ze wspaniałymi widokami na wybrzeże.",
       },
       dinara: {
         name: "Dinara",
         description:
-          "Najwyższy szczyt Chorwacji z zapierającymi dech panoramicznymi widokami",
+          "Najwyższy szczyt Chorwacji z zapierającymi dech panoramicznymi widokami.",
       },
       telascica: {
         name: "Telašćica",
         description:
-          "Dziewiczy park przyrody na Dugi Otok z dramatycznymi klifami i słonym jeziorem",
+          "Dziewiczy park przyrody na Dugi Otok z dramatycznymi klifami i słonym jeziorem.",
       },
       lastovo: {
         name: "Lastovo",
         description:
-          "Odległy wyspiarski park przyrody z nietknięcymi krajobrazami i ciemnym niebem",
+          "Odległy wyspiarski park przyrody z nietknięcymi krajobrazami i ciemnym niebem.",
       },
     },
     historicCities: {
       dubrovnik: {
         name: "Dubrownik",
-        description: "Perła Adriatyku z ikonicznymi murami miejskimi",
+        description: "Perła Adriatyku z ikonicznymi murami miejskimi.",
       },
       split: {
         name: "Split",
         description:
-          "Starożytny rzymski pałac przekształcony w tętniące życiem centrum miasta",
+          "Starożytny rzymski pałac przekształcony w tętniące życiem centrum miasta.",
       },
       sibenik: {
         name: "Šibenik",
         description:
-          "Średniowieczne miasto z katedrami dziedzictwa światowego UNESCO",
+          "Średniowieczne miasto z katedrami dziedzictwa światowego UNESCO.",
       },
       zadar: {
         name: "Zadar",
-        description: "Rzymskie ruiny i nowoczesne atrakcje jak Organy Morskie",
+        description: "Rzymskie ruiny i nowoczesne atrakcje jak Organy Morskie.",
       },
       makarska: {
         name: "Makarska",
-        description: "Piękne nadmorskie miasto pod łańcuchem górskim Biokovo",
+        description: "Piękne nadmorskie miasto pod łańcuchem górskim Biokovo.",
       },
       novalja: {
         name: "Novalja",
         description:
-          "Tętniące życiem miasto na wyspie Pag słynące z życia nocnego i plaż",
+          "Tętniące życiem miasto na wyspie Pag słynące z życia nocnego i plaż.",
       },
     },
     attractions: {
       diocletiansPalace: {
         name: "Pałac Dioklecjana",
-        description: "Starożytny rzymski kompleks pałacowy w sercu Splitu",
+        description: "Starożytny rzymski kompleks pałacowy w sercu Splitu.",
       },
       seaOrgan: {
         name: "Organy Morskie",
         description:
-          "Unikalny architektoniczny obiekt sztuki dźwiękowej w Zadarze",
+          "Unikalny architektoniczny obiekt sztuki dźwiękowej w Zadarze.",
       },
       pagCheeseFactory: {
-        name: "Serowarnia Pag",
-        description: "Tradycyjna produkcja sera na wyspie Pag",
+        name: "Fabryka Sera Pag",
+        description: "Tradycyjna produkcja sera na wyspie Pag.",
       },
       trogirOldTown: {
         name: "Stare Miasto Trogir",
-        description: "Średniowieczne miasto dziedzictwa światowego UNESCO",
+        description: "Średniowieczne miasto dziedzictwa światowego UNESCO.",
       },
       salonaRuins: {
         name: "Ruiny Salony",
-        description: "Starożytna rzymska stolica Dalmacji koło Splitu",
+        description: "Starożytna rzymska stolica Dalmacji koło Splitu.",
       },
       klisFortress: {
         name: "Twierdza Klis",
         description:
-          "Średniowieczna twierdza z panoramicznymi widokami na Split",
+          "Średniowieczna twierdza z panoramicznymi widokami na Split.",
       },
     },
   },
   footer: {
     description:
-      "Premium usługa taxi zapewniająca komfortowe, niezawodne i szybkie usługi transportowe w całej Dalmacji, od Novalji i Jezior Plitwickich po Zadar, Split i Dubrownik.",
+      "Premium serwis taxi zapewniający komfortowe, niezawodne i szybkie usługi transportowe w całej Dalmacji, od Novalji i Jezior Plitwickich po Zadar, Split i Dubrownik.",
     quickLinks: "Szybkie Linki",
     services: "Usługi",
     contactInfo: "Informacje Kontaktowe",
     servicesList: {
       airportTransfer: "Transfer Lotniskowy",
-      corporateTravel: "Podróże Służbowe",
-      eventTransportation: "Transport na Wydarzenia",
+      corporateTravel: "Podróże Biznesowe",
+      eventTransportation: "Transport Eventowy",
       hourlyHire: "Wynajem Godzinowy",
       specialOccasions: "Specjalne Okazje",
-      longDistanceTravel: "Podróże Dalekobieżne",
+      longDistanceTravel: "Podróże Długodystansowe",
     },
     contactLabels: {
       sms: "SMS",
@@ -308,8 +288,8 @@ const pl = {
       googleBusiness: "Google Business",
       hours: "24/7, 365 dni w roku",
     },
-    copyright: "TaxiGagi Usługi Taxi. Wszelkie prawa zastrzeżone.",
-    termsAndPrivacy: "Regulamin i Polityka Prywatności",
+    copyright: "TaxiGagi Taxi Services. Wszystkie prawa zastrzeżone.",
+    termsAndPrivacy: "Warunki i Zasady oraz Polityka Prywatności",
   },
   terms: {
     backToHome: "Powrót do strony głównej",

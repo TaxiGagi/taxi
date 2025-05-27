@@ -21,9 +21,8 @@ const AboutUs = () => {
             </h2>
             <div className="space-y-4 text-gray-600">
               <p>{t("about.description")}</p>
-              <p>
-                {t("about.paragraph1")} {t("about.paragraph2")}
-              </p>
+              <p>{t("about.paragraph1")}</p>
+              <p>{t("about.paragraph2")}</p>
               <p>{t("about.paragraph3")}</p>
             </div>
           </motion.div>

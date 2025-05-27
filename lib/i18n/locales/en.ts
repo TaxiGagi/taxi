@@ -1,27 +1,15 @@
 const en = {
   common: {
     callNow: "Call Now",
-    bookNow: "Book Now",
-    sendMessage: "Send Message",
     chooseMethod: "Choose Message Method",
     chooseMethodDescription:
-      "Select your preferred way to send the booking request",
+      "Select your preferred way to send the booking request.",
     whatsapp: "WhatsApp (Recommended)",
     sms: "SMS",
-    name: "Name",
-    message: "Message",
-    yourName: "Your name",
-    howCanWeHelp: "How can we help you?",
-    loading: "Loading...",
-    error: "Error",
-    success: "Success",
   },
   nav: {
     home: "Home",
     about: "About",
-    services: "Services",
-    areas: "Areas",
-    pricing: "Pricing",
     fleet: "Fleet",
     testimonials: "Testimonials",
     destinations: "Destinations",
@@ -46,36 +34,31 @@ const en = {
       luxurySedan: "up to 4 persons (luxury sedan)",
       shuttle: "up to 7 persons (shuttle)",
     },
-    selectDate: "Select date",
-    selectTime: "Select time",
     date: "Date",
     time: "Time",
     notesPlaceholder: "Add any special requests or notes...",
     paymentInfo: "We accept both cash and card payments.",
     dateDialog: {
       title: "Select Date",
-      description: "Choose your preferred travel date",
+      description: "Choose your preferred travel date.",
     },
   },
   about: {
-    title: "Your Trusted Transportation Partner in Dalmatia",
-    subtitle: "Experience and Reliability",
+    title: "Your Trusted Transportation Partner from Zadar",
     description:
-      "Welcome to Taxi Gagi, your premier transportation service in the beautiful region of Dalmatia. With years of experience serving both locals and tourists, we've established ourselves as a reliable and professional taxi service that covers the entire Dalmatian coast.",
+      "Taxi Gagi is a professional transportation service operating from Zadar, offering reliable and high-quality taxi solutions across the wider Zadar region and beyond. With years of experience serving both residents and visitors, we are committed to providing a smooth, punctual, and comfortable travel experience.",
     paragraph1:
-      "From the historic streets of Zadar to the bustling city of Split, from the stunning Plitvice Lakes to the pearl of the Adriatic - Dubrovnik, our service spans across all major destinations in the region.",
+      "We serve Zadar and surrounding areas, with the flexibility to drive to destinations across Croatia — from coastal towns like Novalja, Dubrovnik or Split, to inland locations such as Plitvice Lakes, and all the way to Zagreb Airport.",
     paragraph2:
-      "We take pride in offering comfortable, punctual, and safe transportation services that cater to all your travel needs.",
+      "Whether you need a local transfer or a long-distance ride, we're ready when you are. Our fleet includes both standard taxis and premium vehicles, giving you the option to travel affordably or in added comfort and style. For larger parties, we offer transportation for groups of up to 7 passengers, ideal for families, small tour groups, or airport transfers.",
     paragraph3:
-      "Our professional drivers know every corner of Dalmatia and can ensure you reach your destination safely and on time. Whether you need an airport transfer, a day trip to Plitvice Lakes, or transportation to your favorite Dalmatian destination, we're here to serve you with the highest standards of customer service.",
+      "In addition to regular taxi services, Taxi Gagi also organizes private excursions and transfers to Croatia's renowned national and nature parks, including Krka, Paklenica, Plitvice Lakes, and more. These tours can be tailored to your itinerary, ensuring a flexible and enjoyable experience in nature.",
   },
   fleet: {
     title: "Our Vehicles",
     subtitle:
-      "Choose the perfect vehicle for your needs from our fleet of premium vehicles",
-    featuresLabel: "Features",
-    passengers: "Passengers",
-    pricePerKm: "From €{{price}}/km",
+      "Choose the perfect vehicle for your needs from our fleet of premium vehicles.",
+    featuresLabel: "Features:",
     bookVehicle: "Book This Vehicle",
     tabs: {
       sedan: "Sedan",
@@ -103,6 +86,9 @@ const en = {
       airportTransfers: "Airport transfers",
       cityTours: "City tours",
       cashlessPayment: "Cashless payment",
+      comfortableSeating: "Comfortable seating",
+      luggageSpace: "Luggage space",
+      twentyFourSevenAvailability: "24/7 availability",
       premiumInterior: "Premium interior",
       climateControl: "Climate control",
       perfectForGroups: "Perfect for groups",
@@ -113,6 +99,9 @@ const en = {
       priorityService: "Priority service",
       refreshmentsIncluded: "Refreshments included",
       professionalChauffeur: "Professional chauffeur",
+      temperatureControlledLeatherSeating:
+        "Temperature-controlled premium leather seating",
+      superiorRideComfort: "Superior ride comfort and handling",
     },
   },
   contact: {
@@ -139,143 +128,136 @@ const en = {
     },
     dialog: {
       title: "Choose Message Method",
-      description: "Select your preferred way to send the message",
+      description: "Select your preferred way to send the message.",
     },
   },
   testimonials: {
     title: "What Our Customers Say",
     subtitle:
       "Don't just take our word for it - hear from our satisfied customers about their experience with our taxi service.",
-    roles: {
-      businessTraveler: "Business Traveler",
-      frequentFlyer: "Frequent Flyer",
-      localResident: "Local Resident",
-      corporateClient: "Corporate Client",
-      tourist: "Tourist",
-      eventOrganizer: "Event Organizer",
-    },
   },
   destinations: {
     title: "Discover Dalmatia",
     subtitle:
-      "Explore the most beautiful destinations in Dalmatia with our comfortable transportation service",
+      "Explore the most beautiful destinations in Dalmatia with our comfortable transportation service.",
     categories: {
       nationalParks: "National Parks",
       natureParks: "Nature Parks",
       historicCities: "Historic Cities",
-      beachDestinations: "Beach Destinations",
       attractions: "Attractions",
     },
     nationalParks: {
       plitviceLakes: {
         name: "Plitvice Lakes",
-        description: "UNESCO World Heritage site featuring 16 cascading lakes",
+        description: "UNESCO World Heritage site featuring 16 cascading lakes.",
       },
       krka: {
         name: "Krka",
-        description: "Stunning waterfalls and monasteries along the Krka River",
+        description:
+          "Stunning waterfalls and monasteries along the Krka River.",
       },
       paklenica: {
         name: "Paklenica",
-        description: "Dramatic canyons and rock climbing paradise in Velebit",
+        description: "Dramatic canyons and rock climbing paradise in Velebit.",
       },
       brijuni: {
         name: "Brijuni",
         description:
-          "Pristine archipelago with rich wildlife and Roman heritage",
+          "Pristine archipelago with rich wildlife and Roman heritage.",
       },
       kornati: {
         name: "Kornati",
         description:
-          "Stunning archipelago of 89 islands with unique karst landscape",
+          "Stunning archipelago of 89 islands with unique karst landscape.",
       },
       mljet: {
         name: "Mljet",
         description:
-          "Pristine island national park with saltwater lakes and ancient monastery",
+          "Pristine island national park with saltwater lakes and ancient monastery.",
       },
     },
     natureParks: {
       vranskoLake: {
         name: "Vransko Lake",
-        description: "Largest natural lake in Croatia, bird watching paradise",
+        description: "Largest natural lake in Croatia, bird watching paradise.",
       },
       velebit: {
         name: "Velebit",
         description:
-          "Croatia's largest mountain range with diverse flora and fauna",
+          "Croatia's largest mountain range with diverse flora and fauna.",
       },
       biokovo: {
         name: "Biokovo",
         description:
-          "Dramatic mountain range above Makarska with stunning coastal views",
+          "Dramatic mountain range above Makarska with stunning coastal views.",
       },
       dinara: {
         name: "Dinara",
-        description: "Croatia's highest peak with breathtaking panoramic views",
+        description:
+          "Croatia's highest peak with breathtaking panoramic views.",
       },
       telascica: {
         name: "Telašćica",
         description:
-          "Pristine nature park on Dugi Otok with dramatic cliffs and salt lake",
+          "Pristine nature park on Dugi Otok with dramatic cliffs and salt lake.",
       },
       lastovo: {
         name: "Lastovo",
         description:
-          "Remote island nature park with untouched landscapes and dark skies",
+          "Remote island nature park with untouched landscapes and dark skies.",
       },
     },
     historicCities: {
       dubrovnik: {
         name: "Dubrovnik",
-        description: "Pearl of the Adriatic with iconic city walls",
+        description: "Pearl of the Adriatic with iconic city walls.",
       },
       split: {
         name: "Split",
-        description: "Ancient Roman palace turned vibrant city center",
+        description: "Ancient Roman palace turned vibrant city center.",
       },
       sibenik: {
         name: "Šibenik",
-        description: "Medieval city with UNESCO World Heritage cathedrals",
+        description: "Medieval city with UNESCO World Heritage cathedrals.",
       },
       zadar: {
         name: "Zadar",
-        description: "Roman ruins and modern attractions like Sea Organ",
+        description: "Roman ruins and modern attractions like Sea Organ.",
       },
       makarska: {
         name: "Makarska",
-        description: "Beautiful coastal town beneath Biokovo mountain range",
+        description: "Beautiful coastal town beneath Biokovo mountain range.",
       },
       novalja: {
         name: "Novalja",
         description:
-          "Vibrant town on Pag island famous for nightlife and beaches",
+          "Vibrant town on Pag island famous for nightlife and beaches.",
       },
     },
     attractions: {
       diocletiansPalace: {
         name: "Diocletian's Palace",
-        description: "Ancient Roman palace complex in the heart of Split",
+        description: "Ancient Roman palace complex in the heart of Split.",
       },
       seaOrgan: {
         name: "Sea Organ",
-        description: "Unique architectural sound art object in Zadar",
+        description: "Unique architectural sound art object in Zadar.",
       },
       pagCheeseFactory: {
         name: "Pag Cheese Factory",
-        description: "Traditional cheese making on the island of Pag",
+        description: "Traditional cheese making on the island of Pag.",
       },
       trogirOldTown: {
         name: "Trogir Old Town",
-        description: "UNESCO World Heritage medieval town",
+        description: "UNESCO World Heritage medieval town.",
       },
       salonaRuins: {
         name: "Salona Ruins",
-        description: "Ancient Roman capital of Dalmatia near Split",
+        description: "Ancient Roman capital of Dalmatia near Split.",
       },
       klisFortress: {
         name: "Klis Fortress",
-        description: "Medieval fortress with panoramic views over Split",
+        description: "Medieval fortress with panoramic views over Split.",
       },
     },
   },

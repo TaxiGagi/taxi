@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import "react-day-picker/dist/style.css";
+import i18n from "@/lib/i18n/config";
 
 const Hero = () => {
   const [pickupLocation, setPickupLocation] = useState("");
@@ -123,8 +124,21 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-              {t("hero.title")}{" "}
-              <span className="text-amber-400">{t("hero.titleHighlight")}</span>
+              {i18n.language !== "hr" ? (
+                <>
+                  {t("hero.title")}{" "}
+                  <span className="text-amber-400">
+                    {t("hero.titleHighlight")}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="text-amber-400">
+                    {t("hero.titleHighlight")}{" "}
+                  </span>
+                  {t("hero.title")}
+                </>
+              )}
             </h1>
             <p className="text-base xs:text-lg sm:text-xl mb-8 text-gray-200">
               {t("hero.subtitle")}

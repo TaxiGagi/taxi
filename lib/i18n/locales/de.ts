@@ -1,27 +1,15 @@
 const de = {
   common: {
     callNow: "Jetzt anrufen",
-    bookNow: "Jetzt buchen",
-    sendMessage: "Nachricht senden",
     chooseMethod: "Nachrichtenmethode wählen",
     chooseMethodDescription:
-      "Wählen Sie Ihre bevorzugte Art der Buchungsanfrage",
+      "Wählen Sie Ihre bevorzugte Art der Buchungsanfrage.",
     whatsapp: "WhatsApp (Empfohlen)",
     sms: "SMS",
-    name: "Name",
-    message: "Nachricht",
-    yourName: "Ihr Name",
-    howCanWeHelp: "Wie können wir Ihnen helfen?",
-    loading: "Laden...",
-    error: "Fehler",
-    success: "Erfolg",
   },
   nav: {
     home: "Startseite",
     about: "Über Uns",
-    services: "Dienstleistungen",
-    areas: "Gebiete",
-    pricing: "Preise",
     fleet: "Flotte",
     testimonials: "Bewertungen",
     destinations: "Reiseziele",
@@ -46,20 +34,17 @@ const de = {
       luxurySedan: "bis zu 4 Personen (Luxus-Limousine)",
       shuttle: "bis zu 7 Personen (Shuttle)",
     },
-    selectDate: "Datum wählen",
-    selectTime: "Zeit wählen",
     date: "Datum",
     time: "Zeit",
     notesPlaceholder: "Besondere Wünsche oder Notizen hinzufügen...",
     paymentInfo: "Wir akzeptieren Bar- und Kartenzahlung.",
     dateDialog: {
       title: "Datum wählen",
-      description: "Wählen Sie Ihr bevorzugtes Reisedatum",
+      description: "Wählen Sie Ihr bevorzugtes Reisedatum.",
     },
   },
   about: {
     title: "Ihr vertrauensvoller Transportpartner in Dalmatien",
-    subtitle: "Erfahrung und Zuverlässigkeit",
     description:
       "Willkommen bei Taxi Gagi, Ihrem erstklassigen Transportservice in der wunderschönen Region Dalmatien. Mit jahrelanger Erfahrung im Service für Einheimische und Touristen haben wir uns als zuverlässiger und professioneller Taxiservice etabliert, der die gesamte dalmatinische Küste abdeckt.",
     paragraph1:
@@ -72,10 +57,8 @@ const de = {
   fleet: {
     title: "Unsere Fahrzeuge",
     subtitle:
-      "Wählen Sie das perfekte Fahrzeug für Ihre Bedürfnisse aus unserer Premium-Flotte",
-    featuresLabel: "Ausstattung",
-    passengers: "Passagiere",
-    pricePerKm: "Ab €{{price}}/km",
+      "Wählen Sie das perfekte Fahrzeug für Ihre Bedürfnisse aus unserer Premium-Flotte.",
+    featuresLabel: "Ausstattung:",
     bookVehicle: "Dieses Fahrzeug buchen",
     tabs: {
       sedan: "Limousine",
@@ -104,6 +87,9 @@ const de = {
       airportTransfers: "Flughafentransfers",
       cityTours: "Stadttouren",
       cashlessPayment: "Bargeldlose Zahlung",
+      comfortableSeating: "Bequeme Sitze",
+      luggageSpace: "Gepäckraum",
+      twentyFourSevenAvailability: "24/7 Verfügbarkeit",
       premiumInterior: "Premium-Interieur",
       climateControl: "Klimakontrolle",
       perfectForGroups: "Perfekt für Gruppen",
@@ -114,6 +100,9 @@ const de = {
       priorityService: "Prioritätsservice",
       refreshmentsIncluded: "Erfrischungen inklusive",
       professionalChauffeur: "Professioneller Chauffeur",
+      temperatureControlledLeatherSeating:
+        "Temperaturgesteuerte Premium-Ledersitze",
+      superiorRideComfort: "Überlegener Fahrkomfort und Fahrdynamik",
     },
   },
   contact: {
@@ -128,7 +117,7 @@ const de = {
       sms: "SMS",
       whatsapp: "WhatsApp",
       business: "Google Business",
-      hours: "Öffnungszeiten",
+      hours: "Arbeitszeiten",
       hoursValue: "24/7, 365 Tage im Jahr",
     },
     form: {
@@ -140,150 +129,142 @@ const de = {
     },
     dialog: {
       title: "Nachrichtenmethode wählen",
-      description: "Wählen Sie Ihre bevorzugte Art der Nachrichtenübermittlung",
+      description:
+        "Wählen Sie Ihre bevorzugte Art der Nachrichtenübermittlung.",
     },
   },
   testimonials: {
     title: "Was unsere Kunden sagen",
     subtitle:
-      "Vertrauen Sie nicht nur unserem Wort - hören Sie, was unsere zufriedenen Kunden über unseren Taxiservice sagen.",
-    roles: {
-      businessTraveler: "Geschäftsreisender",
-      frequentFlyer: "Vielreisender",
-      localResident: "Ortsansässiger",
-      corporateClient: "Firmenkunde",
-      tourist: "Tourist",
-      eventOrganizer: "Eventorganisator",
-    },
+      "Glauben Sie nicht nur uns - hören Sie von unseren zufriedenen Kunden über ihre Erfahrungen mit unserem Taxiservice.",
   },
   destinations: {
     title: "Entdecken Sie Dalmatien",
     subtitle:
-      "Erkunden Sie die schönsten Reiseziele in Dalmatien mit unserem komfortablen Transportservice",
+      "Erkunden Sie die schönsten Reiseziele in Dalmatien mit unserem komfortablen Transportservice.",
     categories: {
       nationalParks: "Nationalparks",
       natureParks: "Naturparks",
       historicCities: "Historische Städte",
-      beachDestinations: "Strandziele",
       attractions: "Attraktionen",
     },
     nationalParks: {
       plitviceLakes: {
         name: "Plitvicer Seen",
-        description: "UNESCO-Weltkulturerbe mit 16 kaskadenförmigen Seen",
+        description: "UNESCO-Weltkulturerbe mit 16 kaskadenförmigen Seen.",
       },
       krka: {
         name: "Krka",
         description:
-          "Atemberaubende Wasserfälle und Klöster entlang des Krka-Flusses",
+          "Atemberaubende Wasserfälle und Klöster entlang des Krka-Flusses.",
       },
       paklenica: {
         name: "Paklenica",
-        description: "Dramatische Schluchten und Kletterparadies im Velebit",
+        description: "Dramatische Schluchten und Kletterparadies im Velebit.",
       },
       brijuni: {
         name: "Brijuni",
         description:
-          "Unberührter Archipel mit reicher Tierwelt und römischem Erbe",
+          "Unberührter Archipel mit reicher Tierwelt und römischem Erbe.",
       },
       kornati: {
         name: "Kornati",
         description:
-          "Atemberaubender Archipel mit 89 Inseln und einzigartiger Karstlandschaft",
+          "Atemberaubender Archipel mit 89 Inseln und einzigartiger Karstlandschaft.",
       },
       mljet: {
         name: "Mljet",
         description:
-          "Unberührter Insel-Nationalpark mit Salzwasserseen und antikem Kloster",
+          "Unberührter Insel-Nationalpark mit Salzwasserseen und antikem Kloster.",
       },
     },
     natureParks: {
       vranskoLake: {
         name: "Vransko-See",
         description:
-          "Größter natürlicher See Kroatiens, Paradies für Vogelbeobachtung",
+          "Größter natürlicher See Kroatiens, Paradies für Vogelbeobachtung.",
       },
       velebit: {
         name: "Velebit",
         description:
-          "Kroatiens größte Gebirgskette mit vielfältiger Flora und Fauna",
+          "Kroatiens größte Gebirgskette mit vielfältiger Flora und Fauna.",
       },
       biokovo: {
         name: "Biokovo",
         description:
-          "Dramatische Gebirgskette über Makarska mit atemberaubendem Küstenblick",
+          "Dramatische Gebirgskette über Makarska mit atemberaubendem Küstenblick.",
       },
       dinara: {
         name: "Dinara",
         description:
-          "Kroatiens höchster Gipfel mit atemberaubendem Panoramablick",
+          "Kroatiens höchster Gipfel mit atemberaubendem Panoramablick.",
       },
       telascica: {
         name: "Telašćica",
         description:
-          "Unberührter Naturpark auf Dugi Otok mit dramatischen Klippen und Salzsee",
+          "Unberührter Naturpark auf Dugi Otok mit dramatischen Klippen und Salzsee.",
       },
       lastovo: {
         name: "Lastovo",
         description:
-          "Abgelegener Insel-Naturpark mit unberührten Landschaften und dunklem Himmel",
+          "Abgelegener Insel-Naturpark mit unberührten Landschaften und dunklem Himmel.",
       },
     },
     historicCities: {
       dubrovnik: {
         name: "Dubrovnik",
-        description: "Perle der Adria mit ikonischen Stadtmauern",
+        description: "Perle der Adria mit ikonischen Stadtmauern.",
       },
       split: {
         name: "Split",
         description:
-          "Antiker römischer Palast, der zu einem lebendigen Stadtzentrum wurde",
+          "Antiker römischer Palast, der zu einem lebendigen Stadtzentrum wurde.",
       },
       sibenik: {
         name: "Šibenik",
         description:
-          "Mittelalterliche Stadt mit UNESCO-Weltkulturerbe-Kathedralen",
+          "Mittelalterliche Stadt mit UNESCO-Weltkulturerbe-Kathedralen.",
       },
       zadar: {
         name: "Zadar",
         description:
-          "Römische Ruinen und moderne Attraktionen wie die Meeresorgel",
+          "Römische Ruinen und moderne Attraktionen wie die Meeresorgel.",
       },
       makarska: {
         name: "Makarska",
-        description: "Wunderschöne Küstenstadt unter dem Biokovo-Gebirge",
+        description: "Wunderschöne Küstenstadt unter dem Biokovo-Gebirge.",
       },
       novalja: {
         name: "Novalja",
         description:
-          "Lebendige Stadt auf der Insel Pag, berühmt für Nachtleben und Strände",
+          "Lebendige Stadt auf der Insel Pag, berühmt für Nachtleben und Strände.",
       },
     },
     attractions: {
       diocletiansPalace: {
         name: "Diokletianpalast",
-        description: "Antiker römischer Palastkomplex im Herzen von Split",
+        description: "Antiker römischer Palastkomplex im Herzen von Split.",
       },
       seaOrgan: {
         name: "Meeresorgel",
         description:
-          "Einzigartiges architektonisches Klangkunstobjekt in Zadar",
+          "Einzigartiges architektonisches Klangkunstobjekt in Zadar.",
       },
       pagCheeseFactory: {
         name: "Pag-Käserei",
-        description: "Traditionelle Käseherstellung auf der Insel Pag",
+        description: "Traditionelle Käseherstellung auf der Insel Pag.",
       },
       trogirOldTown: {
         name: "Altstadt Trogir",
-        description: "UNESCO-Weltkulturerbe mittelalterliche Stadt",
+        description: "UNESCO-Weltkulturerbe mittelalterliche Stadt.",
       },
       salonaRuins: {
         name: "Salona-Ruinen",
-        description: "Antike römische Hauptstadt Dalmatiens bei Split",
+        description: "Antike römische Hauptstadt Dalmatiens bei Split.",
       },
       klisFortress: {
         name: "Festung Klis",
-        description: "Mittelalterliche Festung mit Panoramablick über Split",
+        description: "Mittelalterliche Festung mit Panoramablick über Split.",
       },
     },
   },

@@ -1,41 +1,29 @@
 const hr = {
   common: {
-    callNow: "Nazovite Odmah",
-    bookNow: "Rezervirajte",
-    sendMessage: "Pošaljite Poruku",
-    chooseMethod: "Odaberite Način Slanja",
+    callNow: "Nazovite odmah",
+    chooseMethod: "Odaberite medijski kanal",
     chooseMethodDescription:
-      "Odaberite željeni način slanja zahtjeva za rezervaciju",
+      "Odaberite željeni medijski kanal za slanje rezervacije.",
     whatsapp: "WhatsApp (Preporučeno)",
     sms: "SMS",
-    name: "Ime",
-    message: "Poruka",
-    yourName: "Vaše ime",
-    howCanWeHelp: "Kako vam možemo pomoći?",
-    loading: "Učitavanje...",
-    error: "Greška",
-    success: "Uspjeh",
   },
   nav: {
     home: "Početna",
-    about: "O Nama",
-    services: "Usluge",
-    areas: "Područja",
-    pricing: "Cijene",
-    fleet: "Vozni Park",
+    about: "O nama",
+    fleet: "Naša vozila",
     testimonials: "Recenzije",
     destinations: "Destinacije",
     contact: "Kontakt",
   },
   hero: {
-    title: "Vaš Premium",
-    titleHighlight: "Taxi Servis",
+    titleHighlight: "Taksi",
+    title: "kakav zaslužujete",
     subtitle:
       "Doživite udoban i pouzdan prijevoz diljem Dalmacije, od Novalje i Plitvica do Zadra, Splita i Dubrovnika.",
-    needRide: "Trebate Vožnju?",
-    pickupLocation: "Lokacija Polaska",
+    needRide: "Trebate vožnju?",
+    pickupLocation: "Lokacija polaska",
     destination: "Odredište",
-    checkAvailability: "Provjerite Dostupnost",
+    checkAvailability: "Provjerite dostupnost",
     messageTemplate:
       "Pozdrav! Želio/la bih rezervirati vožnju:\n\nOd: {{pickup}}\nDo: {{destination}}",
     addNotes: "Dodaj napomene",
@@ -46,54 +34,49 @@ const hr = {
       luxurySedan: "do 4 osobe (luksuzni sedan)",
       shuttle: "do 7 osoba (kombi)",
     },
-    selectDate: "Odaberite datum",
-    selectTime: "Odaberite vrijeme",
     date: "Datum",
     time: "Vrijeme",
     notesPlaceholder: "Dodajte posebne zahtjeve ili napomene...",
     paymentInfo: "Prihvaćamo gotovinu i kartično plaćanje.",
     dateDialog: {
-      title: "Odaberite Datum",
-      description: "Odaberite željeni datum putovanja",
+      title: "Odaberite datum",
+      description: "Odaberite željeni datum putovanja.",
     },
   },
   about: {
-    title: "Vaš Pouzdani Partner za Prijevoz u Dalmaciji",
-    subtitle: "Iskustvo i Pouzdanost",
+    title: "Vaš pouzdani taksi partner",
     description:
-      "Dobrodošli u Taxi Gagi, vašu prvoklasnu prijevozničku uslugu u prekrasnoj regiji Dalmacije. S godinama iskustva u službi lokalnog stanovništva i turista, etablirali smo se kao pouzdan i profesionalan taxi servis koji pokriva cijelu dalmatinsku obalu.",
+      "Taxi Gagi je profesionalna taksi služba iz Zadra koja pruža usluge prijevoza diljem Dalmacije. S godinama iskustva predani smo pružanju udobne i pouzdane usluge kako domaćim tako i stranim posjetiteljima.",
     paragraph1:
-      "Od povijesnih ulica Zadra do živahnog grada Splita, od prekrasnih Plitvičkih jezera do bisera Jadrana - Dubrovnika, naša usluga pokriva sve glavne destinacije u regiji.",
+      "Usluge primarno nudimo u Zadaru i okolnim područjima, s fleksibilnošću vožnje do odredišta diljem Hrvatske — od obalnih gradova poput Novalje, Dubrovnika ili Splita, do unutrašnjih lokacija poput Plitvičkih jezera, pa sve do Zagrebačke zračne luke.",
     paragraph2:
-      "Ponosimo se pružanjem udobnog, točnog i sigurnog prijevoza koji zadovoljava sve vaše potrebe za putovanjem.",
+      "Bilo da trebate lokalni transfer ili vožnju na dugu udaljenost, spremni smo kad god trebate. U ponudi imamo standardne taksije ali i ekskluzivna vozila, pružajući vam opciju putovanja po pristupačnoj cijeni ili u dodatnoj udobnosti i stilu. Za veće grupe, nudimo prijevoz do 7 putnika u jednom vozilu, idealno za obitelji, male turističke grupe ili transfere do zračne luke.",
     paragraph3:
-      "Naši profesionalni vozači poznaju svaki kutak Dalmacije i mogu osigurati da sigurno i na vrijeme stignete na svoje odredište. Bilo da trebate transfer do zračne luke, jednodnevni izlet na Plitvička jezera ili prijevoz do vaše omiljene dalmatinske destinacije, tu smo da vam služimo s najvišim standardima korisničke usluge.",
+      "Osim redovitih taksi usluga, Taxi Gagi također organizira privatne izlete i transfere do poznatih nacionalnih i prirodnih parkova, uključujući Krku, Paklenicu, Plitvička jezera, te ostalih turističkih destinacija. Ovi obilasci mogu biti prilagođeni vašem rasporedu, osiguravajući fleksibilno i ugodno iskustvo.",
   },
   fleet: {
-    title: "Naša Vozila",
+    title: "Naša vozila",
     subtitle:
-      "Odaberite savršeno vozilo za vaše potrebe iz našeg premium voznog parka",
-    featuresLabel: "Značajke",
-    passengers: "Putnici",
-    pricePerKm: "Od €{{price}}/km",
-    bookVehicle: "Rezerviraj Ovo Vozilo",
+      "Odaberite savršeno vozilo za vaše potrebe iz našeg standardnog ili ekskluzivnog voznog parka.",
+    featuresLabel: "Značajke:",
+    bookVehicle: "Rezerviraj ovo vozilo",
     tabs: {
       sedan: "Sedan",
       shuttle: "Kombi",
-      luxury: "Luksuz",
+      luxury: "Luksuzni sedan",
     },
     vehicles: {
       sedan: {
-        name: "Standardni Sedan",
-        description: "Udobna i elegantna opcija za do 4 putnika.",
+        name: "Standardni sedan",
+        description: "Udobna opcija za do 4 putnika.",
       },
       shuttle: {
         name: "Kombi",
         description: "Prostrani Mercedes kombi savršen za grupe ili obitelji.",
       },
       luxury: {
-        name: "Izvršni Luksuz",
-        description: "Premium iskustvo s vrhunskim vozilima i uslugom.",
+        name: "Luksuzni sedan",
+        description: "Ekskluzivno iskustvo s vrhunskom uslugom.",
       },
     },
     features: {
@@ -102,6 +85,9 @@ const hr = {
       airportTransfers: "Transferi do zračne luke",
       cityTours: "Gradski obilasci",
       cashlessPayment: "Bezgotovinsko plaćanje",
+      comfortableSeating: "Udobna sjedala",
+      luggageSpace: "Prostor za prtljagu",
+      twentyFourSevenAvailability: "Dostupnost 24/7",
       premiumInterior: "Premium interijer",
       climateControl: "Kontrola klime",
       perfectForGroups: "Savršeno za grupe",
@@ -112,21 +98,24 @@ const hr = {
       priorityService: "Prioritetna usluga",
       refreshmentsIncluded: "Uključena osvježenja",
       professionalChauffeur: "Profesionalni vozač",
+      temperatureControlledLeatherSeating:
+        "Luksuzna kožna sjedala s kontrolom temperature",
+      superiorRideComfort: "Superiorna udobnost vožnje i upravljanje",
     },
   },
   contact: {
-    title: "Kontaktirajte Nas",
+    title: "Kontaktirajte nas",
     subtitle:
-      "Imate pitanja ili trebate rezervirati vožnju? Javite nam se putem bilo kojeg od naših kontakt kanala.",
-    sendMessage: "Pošaljite Nam Poruku",
-    contactInfo: "Kontakt Informacije",
+      "Imate pitanja ili trebate rezervirati vožnju? Obratite nam se putem bilo kojeg od naših kontakt kanala.",
+    sendMessage: "Pošaljite nam poruku",
+    contactInfo: "Kontakt informacije",
     viewProfile: "Pogledajte naš poslovni profil",
     info: {
-      phone: "Nazovite Nas",
+      phone: "Nazovite nas",
       sms: "SMS",
       whatsapp: "WhatsApp",
       business: "Google Business",
-      hours: "Radno Vrijeme",
+      hours: "Radno vrijeme",
       hoursValue: "24/7, 365 dana u godini",
     },
     form: {
@@ -134,167 +123,158 @@ const hr = {
       message: "Poruka",
       namePlaceholder: "Vaše ime",
       messagePlaceholder: "Kako vam možemo pomoći?",
-      send: "Pošalji Poruku",
+      send: "Pošaljite poruku",
     },
     dialog: {
-      title: "Odaberite Način Slanja",
-      description: "Odaberite željeni način slanja poruke",
+      title: "Odaberite način slanja poruke",
+      description: "Odaberite željeni način slanja poruke.",
     },
   },
   testimonials: {
-    title: "Što Kažu Naši Klijenti",
+    title: "Što kažu naši kupci",
     subtitle:
-      "Ne vjerujte samo nama - poslušajte što naši zadovoljni klijenti kažu o našoj taxi usluzi.",
-    roles: {
-      businessTraveler: "Poslovni Putnik",
-      frequentFlyer: "Česti Putnik",
-      localResident: "Lokalni Stanovnik",
-      corporateClient: "Korporativni Klijent",
-      tourist: "Turist",
-      eventOrganizer: "Organizator Događaja",
-    },
+      "Ne vjerujte samo nama na riječ - čujte od naših zadovoljnih kupaca o njihovom iskustvu s našom taxi uslugom.",
   },
   destinations: {
     title: "Otkrijte Dalmaciju",
-    subtitle:
-      "Istražite najljepše destinacije u Dalmaciji s našim udobnim prijevozom",
+    subtitle: "Istražite najljepše destinacije Dalmacije bez brige.",
     categories: {
-      nationalParks: "Nacionalni Parkovi",
-      natureParks: "Parkovi Prirode",
-      historicCities: "Povijesni Gradovi",
-      beachDestinations: "Plaže i Kupališta",
+      nationalParks: "Nacionalni parkovi",
+      natureParks: "Parkovi prirode",
+      historicCities: "Povijesni gradovi",
       attractions: "Atrakcije",
     },
     nationalParks: {
       plitviceLakes: {
         name: "Plitvička jezera",
-        description: "UNESCO-va svjetska baština s 16 kaskadnih jezera",
+        description: "UNESCO-va svjetska baština s 16 kaskadnih jezera.",
       },
       krka: {
         name: "Krka",
-        description: "Prekrasni slapovi i samostani uz rijeku Krku",
+        description: "Prekrasni slapovi i samostani uz rijeku Krku.",
       },
       paklenica: {
         name: "Paklenica",
-        description: "Dramatični kanjoni i raj za penjanje u Velebitu",
+        description: "Dramatični kanjoni i raj za penjanje u Velebitu.",
       },
       brijuni: {
         name: "Brijuni",
         description:
-          "Netaknuti arhipelag s bogatom divljinom i rimskim naslijeđem",
+          "Netaknuti arhipelag s bogatom faunom i rimskim naslijeđem.",
       },
       kornati: {
         name: "Kornati",
         description:
-          "Prekrasan arhipelag od 89 otoka s jedinstvenim krškim krajolikom",
+          "Prekrasan arhipelag od 89 otoka s jedinstvenim krškim krajobrazom.",
       },
       mljet: {
         name: "Mljet",
         description:
-          "Netaknuti otočni nacionalni park sa slanim jezerima i drevnim samostanom",
+          "Netaknuti otočni nacionalni park sa slanim jezerima i drevnim samostanom.",
       },
     },
     natureParks: {
       vranskoLake: {
         name: "Vransko jezero",
         description:
-          "Najveće prirodno jezero u Hrvatskoj, raj za promatranje ptica",
+          "Najveće prirodno jezero u Hrvatskoj, raj za promatranje ptica.",
       },
       velebit: {
         name: "Velebit",
         description:
-          "Najveći planinski lanac Hrvatske s raznolikim biljnim i životinjskim svijetom",
+          "Najveći planinski lanac Hrvatske s raznolikim biljnim i životinjskim svijetom.",
       },
       biokovo: {
         name: "Biokovo",
         description:
-          "Dramatičan planinski lanac iznad Makarske s prekrasnim pogledom na obalu",
+          "Dramatičan planinski lanac iznad Makarske s prekrasnim pogledom na obalu.",
       },
       dinara: {
         name: "Dinara",
-        description: "Najviši vrh Hrvatske s prekrasnim panoramskim pogledom",
+        description: "Najviši vrh Hrvatske s prekrasnim panoramskim pogledima.",
       },
       telascica: {
         name: "Telašćica",
         description:
-          "Netaknuti park prirode na Dugom otoku s dramatičnim liticama i slanim jezerom",
+          "Netaknuti park prirode na Dugom otoku s dramatičnim liticama i slanim jezerom.",
       },
       lastovo: {
         name: "Lastovo",
         description:
-          "Udaljeni otočni park prirode s netaknutim krajolikom i tamnim nebom",
+          "Udaljeni otočni park prirode s netaknutim krajobrazima i tamnim nebom.",
       },
     },
     historicCities: {
       dubrovnik: {
         name: "Dubrovnik",
-        description: "Biser Jadrana s ikoničnim gradskim zidinama",
+        description: "Biser Jadrana s ikoničnim gradskim zidinama.",
       },
       split: {
         name: "Split",
         description:
-          "Antička rimska palača pretvorena u živahan gradski centar",
+          "Drevna rimska palača pretvorena u živahno gradsko središte.",
       },
       sibenik: {
         name: "Šibenik",
-        description: "Srednjovjekovni grad s UNESCO-vim katedralama",
+        description:
+          "Srednjovjekovni grad s katedralama UNESCO-ve svjetske baštine.",
       },
       zadar: {
         name: "Zadar",
         description:
-          "Rimske ruševine i moderne atrakcije poput Morskih orgulja",
+          "Rimske ruševine i moderne atrakcije poput Morskih orgulja.",
       },
       makarska: {
         name: "Makarska",
-        description: "Prekrasan obalni grad pod planinom Biokovo",
+        description: "Prekrasan obalni grad ispod planine Biokovo.",
       },
       novalja: {
         name: "Novalja",
         description:
-          "Živahan grad na otoku Pagu poznat po noćnom životu i plažama",
+          "Živahan grad na otoku Pagu poznat po noćnom životu i plažama.",
       },
     },
     attractions: {
       diocletiansPalace: {
         name: "Dioklecijanova palača",
-        description: "Antički rimski palačni kompleks u srcu Splita",
+        description: "Drevni rimski palačni kompleks u srcu Splita.",
       },
       seaOrgan: {
         name: "Morske orgulje",
         description:
-          "Jedinstveni arhitektonski zvučni umjetnički objekt u Zadru",
+          "Jedinstveni arhitektonski zvučni umjetnički objekt u Zadru.",
       },
       pagCheeseFactory: {
         name: "Tvornica sira Pag",
-        description: "Tradicionalno proizvodnja sira na otoku Pagu",
+        description: "Tradicionalna proizvodnja sira na otoku Pagu.",
       },
       trogirOldTown: {
         name: "Stari grad Trogir",
-        description: "UNESCO-va svjetska baština srednjovjekovni grad",
+        description: "Srednjovjekovni grad UNESCO-ve svjetske baštine.",
       },
       salonaRuins: {
         name: "Ruševine Salone",
-        description: "Antička rimska prijestolnica Dalmacije blizu Splita",
+        description: "Drevna rimska prijestolnica Dalmacije blizu Splita.",
       },
       klisFortress: {
         name: "Tvrđava Klis",
-        description: "Srednjovjekovna tvrđava s panoramskim pogledom na Split",
+        description: "Srednjovjekovna tvrđava s panoramskim pogledom na Split.",
       },
     },
   },
   footer: {
     description:
-      "Premium taxi servis koji pruža udoban, pouzdan i brz prijevoz diljem Dalmacije, od Novalje i Plitvica do Zadra, Splita i Dubrovnika.",
-    quickLinks: "Brze Veze",
+      "Premium taxi usluga koja pruža udobne, pouzdane i brze transportne usluge diljem Dalmacije, od Novalje i Plitvica do Zadra, Splita i Dubrovnika.",
+    quickLinks: "Brze veze",
     services: "Usluge",
-    contactInfo: "Kontakt Informacije",
+    contactInfo: "Kontakt informacije",
     servicesList: {
-      airportTransfer: "Transfer do Zračne Luke",
-      corporateTravel: "Poslovni Prijevoz",
-      eventTransportation: "Prijevoz za Događanja",
-      hourlyHire: "Najam po Satu",
-      specialOccasions: "Posebne Prilike",
-      longDistanceTravel: "Dalekosežni Prijevoz",
+      airportTransfer: "Transfer do zračne luke",
+      corporateTravel: "Poslovno putovanje",
+      eventTransportation: "Transport za događanja",
+      hourlyHire: "Najam po satu",
+      specialOccasions: "Posebne prilike",
+      longDistanceTravel: "Putovanje na duge udaljenosti",
     },
     contactLabels: {
       sms: "SMS",
@@ -302,8 +282,8 @@ const hr = {
       googleBusiness: "Google Business",
       hours: "24/7, 365 dana u godini",
     },
-    copyright: "TaxiGagi Taxi Servisi. Sva prava pridržana.",
-    termsAndPrivacy: "Uvjeti i Odredbe te Pravila Privatnosti",
+    copyright: "TaxiGagi Taxi Services. Sva prava pridržana.",
+    termsAndPrivacy: "Uvjeti i odredbe i Pravila privatnosti",
   },
   terms: {
     backToHome: "Povratak na početnu",

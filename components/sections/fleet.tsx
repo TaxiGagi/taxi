@@ -24,10 +24,11 @@ const getVehicles = (t: any) => [
     passengers: 4,
     features: [
       t("fleet.features.airConditioning"),
+      t("fleet.features.comfortableSeating"),
       t("fleet.features.professionalDriver"),
-      t("fleet.features.airportTransfers"),
-      t("fleet.features.cityTours"),
       t("fleet.features.cashlessPayment"),
+      t("fleet.features.luggageSpace"),
+      t("fleet.features.twentyFourSevenAvailability"),
     ],
   },
   {
@@ -37,12 +38,12 @@ const getVehicles = (t: any) => [
     image: "/images/viano.png",
     passengers: 7,
     features: [
-      t("fleet.features.premiumInterior"),
-      t("fleet.features.climateControl"),
-      t("fleet.features.perfectForGroups"),
-      t("fleet.features.airportMeetGreet"),
-      t("fleet.features.complementaryWater"),
-      t("fleet.features.extraSpace"),
+      t("fleet.features.airConditioning"),
+      t("fleet.features.comfortableSeating"),
+      t("fleet.features.professionalDriver"),
+      t("fleet.features.cashlessPayment"),
+      t("fleet.features.luggageSpace"),
+      t("fleet.features.twentyFourSevenAvailability"),
     ],
   },
   {
@@ -52,12 +53,12 @@ const getVehicles = (t: any) => [
     image: "/images/merc.png",
     passengers: 4,
     features: [
-      t("fleet.features.premiumInterior"),
-      t("fleet.features.executiveExperience"),
-      t("fleet.features.priorityService"),
-      t("fleet.features.refreshmentsIncluded"),
-      t("fleet.features.airportMeetGreet"),
-      t("fleet.features.professionalChauffeur"),
+      t("fleet.features.airConditioning"),
+      t("fleet.features.twentyFourSevenAvailability"),
+      t("fleet.features.professionalDriver"),
+      t("fleet.features.cashlessPayment"),
+      t("fleet.features.superiorRideComfort"),
+      t("fleet.features.temperatureControlledLeatherSeating"),
     ],
   },
 ];
@@ -173,7 +174,7 @@ const Fleet = () => {
                         {vehicle.features.map(
                           (feature: string, index: number) => (
                             <li key={index} className="flex items-center">
-                              <div className="h-2 w-2 rounded-full bg-amber-400 mr-2"></div>
+                              <div className="h-2 w-2 rounded-full bg-amber-400 mr-2 flex-shrink-0"></div>
                               {feature}
                             </li>
                           )

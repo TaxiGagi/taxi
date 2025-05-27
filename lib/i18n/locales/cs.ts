@@ -1,27 +1,15 @@
 const cs = {
   common: {
     callNow: "Zavolejte nyní",
-    bookNow: "Rezervovat",
-    sendMessage: "Poslat zprávu",
     chooseMethod: "Vyberte způsob",
     chooseMethodDescription:
-      "Vyberte preferovaný způsob odeslání žádosti o rezervaci",
+      "Vyberte preferovaný způsob odeslání žádosti o rezervaci.",
     whatsapp: "WhatsApp (Doporučeno)",
     sms: "SMS",
-    name: "Jméno",
-    message: "Zpráva",
-    yourName: "Vaše jméno",
-    howCanWeHelp: "Jak vám můžeme pomoci?",
-    loading: "Načítání...",
-    error: "Chyba",
-    success: "Úspěch",
   },
   nav: {
     home: "Domů",
     about: "O Nás",
-    services: "Služby",
-    areas: "Oblasti",
-    pricing: "Ceník",
     fleet: "Vozový park",
     testimonials: "Reference",
     destinations: "Destinace",
@@ -46,20 +34,17 @@ const cs = {
       luxurySedan: "až 4 osoby (luxusní sedan)",
       shuttle: "až 7 osob (shuttle)",
     },
-    selectDate: "Vyberte datum",
-    selectTime: "Vyberte čas",
     date: "Datum",
     time: "Čas",
     notesPlaceholder: "Přidejte speciální požadavky nebo poznámky...",
     paymentInfo: "Přijímáme platby v hotovosti i kartou.",
     dateDialog: {
       title: "Vyberte Datum",
-      description: "Vyberte preferované datum cesty",
+      description: "Vyberte preferované datum cesty.",
     },
   },
   about: {
     title: "Váš důvěryhodný dopravní partner v Dalmácii",
-    subtitle: "Zkušenosti a spolehlivost",
     description:
       "Vítejte u Taxi Gagi, vaší prémiové dopravní služby v krásné oblasti Dalmácie. S letitými zkušenostmi v obsluze místních obyvatel i turistů jsme se etablovali jako spolehlivá a profesionální taxislužba pokrývající celé dalmatské pobřeží.",
     paragraph1:
@@ -72,10 +57,8 @@ const cs = {
   fleet: {
     title: "Naše Vozidla",
     subtitle:
-      "Vyberte si perfektní vozidlo pro vaše potřeby z naší prémiové flotily",
-    featuresLabel: "Vlastnosti",
-    passengers: "Cestující",
-    pricePerKm: "Od €{{price}}/km",
+      "Vyberte si perfektní vozidlo pro vaše potřeby z naší prémiové flotily.",
+    featuresLabel: "Vlastnosti:",
     bookVehicle: "Rezervovat toto vozidlo",
     tabs: {
       sedan: "Sedan",
@@ -103,6 +86,9 @@ const cs = {
       airportTransfers: "Transfery na letiště",
       cityTours: "Prohlídky města",
       cashlessPayment: "Bezhotovostní platba",
+      comfortableSeating: "Pohodlné sedadla",
+      luggageSpace: "Prostor pro zavazadla",
+      twentyFourSevenAvailability: "Dostupnost 24/7",
       premiumInterior: "Prémiový interiér",
       climateControl: "Kontrola klimatu",
       perfectForGroups: "Perfektní pro skupiny",
@@ -113,6 +99,9 @@ const cs = {
       priorityService: "Prioritní služba",
       refreshmentsIncluded: "Občerstvení v ceně",
       professionalChauffeur: "Profesionální šofér",
+      temperatureControlledLeatherSeating:
+        "Kožená sedadla premium s teplotní kontrolou",
+      superiorRideComfort: "Vynikající komfort jízdy a řízení",
     },
   },
   contact: {
@@ -139,145 +128,138 @@ const cs = {
     },
     dialog: {
       title: "Vyberte způsob zprávy",
-      description: "Vyberte preferovaný způsob odeslání zprávy",
+      description: "Vyberte preferovaný způsob odeslání zprávy.",
     },
   },
   testimonials: {
     title: "Co říkají naši zákazníci",
     subtitle:
       "Nevěřte jen našim slovům - poslechněte si, co říkají naši spokojení zákazníci o zkušenostech s naší taxislužbou.",
-    roles: {
-      businessTraveler: "Obchodní cestující",
-      frequentFlyer: "Častý cestovatel",
-      localResident: "Místní obyvatel",
-      corporateClient: "Firemní klient",
-      tourist: "Turista",
-      eventOrganizer: "Organizátor akcí",
-    },
   },
   destinations: {
     title: "Objevte Dalmácii",
     subtitle:
-      "Prozkoumejte nejkrásnější destinace v Dalmácii s naším pohodlným dopravním servisem",
+      "Prozkoumejte nejkrásnější destinace v Dalmácii s naším pohodlným dopravním servisem.",
     categories: {
       nationalParks: "Národní parky",
       natureParks: "Přírodní parky",
       historicCities: "Historická města",
-      beachDestinations: "Plážové destinace",
       attractions: "Atrakce",
     },
     nationalParks: {
       plitviceLakes: {
         name: "Plitvická jezera",
-        description: "Světové dědictví UNESCO s 16 kaskádovitými jezery",
+        description: "Světové dědictví UNESCO s 16 kaskádovitými jezery.",
       },
       krka: {
         name: "Krka",
-        description: "Úchvatné vodopády a kláštery podél řeky Krky",
+        description: "Úchvatné vodopády a kláštery podél řeky Krky.",
       },
       paklenica: {
         name: "Paklenica",
-        description: "Dramatické kaňony a ráj horolezectví ve Velebitu",
+        description: "Dramatické kaňony a ráj horolezectví ve Velebitu.",
       },
       brijuni: {
         name: "Brijuni",
         description:
-          "Nedotčený souostroví s bohatou faunou a římským dědictvím",
+          "Nedotčený souostroví s bohatou faunou a římským dědictvím.",
       },
       kornati: {
         name: "Kornati",
         description:
-          "Úchvatné souostroví 89 ostrovů s jedinečnou krasovou krajinou",
+          "Úchvatné souostroví 89 ostrovů s jedinečnou krasovou krajinou.",
       },
       mljet: {
         name: "Mljet",
         description:
-          "Nedotčený ostrovní národní park se slanými jezery a starověkým klášterem",
+          "Nedotčený ostrovní národní park se slanými jezery a starověkým klášterem.",
       },
     },
     natureParks: {
       vranskoLake: {
         name: "Vranské jezero",
         description:
-          "Největší přírodní jezero v Chorvatsku, ráj pozorování ptáků",
+          "Největší přírodní jezero v Chorvatsku, ráj pozorování ptáků.",
       },
       velebit: {
         name: "Velebit",
-        description: "Největší pohoří Chorvatska s rozmanitou flórou a faunou",
+        description: "Největší pohoří Chorvatska s rozmanitou flórou a faunou.",
       },
       biokovo: {
         name: "Biokovo",
         description:
-          "Dramatické pohoří nad Makarskou s úchvatnými pobřežními výhledy",
+          "Dramatické pohoří nad Makarskou s úchvatnými pobřežními výhledy.",
       },
       dinara: {
         name: "Dinara",
         description:
-          "Nejvyšší vrchol Chorvatska s úchvatnými panoramatickými výhledy",
+          "Nejvyšší vrchol Chorvatska s úchvatnými panoramatickými výhledy.",
       },
       telascica: {
         name: "Telašćica",
         description:
-          "Nedotčený přírodní park na Dugém otoku s dramatickými útesy a slaným jezerem",
+          "Nedotčený přírodní park na Dugém otoku s dramatickými útesy a slaným jezerem.",
       },
       lastovo: {
         name: "Lastovo",
         description:
-          "Vzdálený ostrovní přírodní park s nedotčenými krajinami a tmavou oblohou",
+          "Vzdálený ostrovní přírodní park s nedotčenými krajinami a tmavou oblohou.",
       },
     },
     historicCities: {
       dubrovnik: {
         name: "Dubrovník",
-        description: "Perla Jadranu s ikonickými městskými hradbami",
+        description: "Perla Jadranu s ikonickými městskými hradbami.",
       },
       split: {
         name: "Split",
-        description: "Starověký římský palác přeměněný na živé městské centrum",
+        description:
+          "Starověký římský palác přeměněný na živé městské centrum.",
       },
       sibenik: {
         name: "Šibenik",
-        description: "Středověké město s katedrálami světového dědictví UNESCO",
+        description:
+          "Středověké město s katedrálami světového dědictví UNESCO.",
       },
       zadar: {
         name: "Zadar",
-        description: "Římské ruiny a moderní atrakce jako Mořské varhany",
+        description: "Římské ruiny a moderní atrakce jako Mořské varhany.",
       },
       makarska: {
         name: "Makarska",
-        description: "Krásné pobřežní město pod pohořím Biokovo",
+        description: "Krásné pobřežní město pod pohořím Biokovo.",
       },
       novalja: {
         name: "Novalja",
         description:
-          "Živé město na ostrově Pag slavné nočním životem a plážemi",
+          "Živé město na ostrově Pag slavné nočním životem a plážemi.",
       },
     },
     attractions: {
       diocletiansPalace: {
         name: "Diokleciánův palác",
-        description: "Starověký římský palácový komplex v srdci Splitu",
+        description: "Starověký římský palácový komplex v srdci Splitu.",
       },
       seaOrgan: {
         name: "Mořské varhany",
         description:
-          "Jedinečný architektonický zvukový umělecký objekt v Zadaru",
+          "Jedinečný architektonický zvukový umělecký objekt v Zadaru.",
       },
       pagCheeseFactory: {
         name: "Sýrárna Pag",
-        description: "Tradiční výroba sýrů na ostrově Pag",
+        description: "Tradiční výroba sýrů na ostrově Pag.",
       },
       trogirOldTown: {
         name: "Staré město Trogir",
-        description: "Středověké město světového dědictví UNESCO",
+        description: "Středověké město světového dědictví UNESCO.",
       },
       salonaRuins: {
         name: "Ruiny Salony",
-        description: "Starověké římské hlavní město Dalmácie u Splitu",
+        description: "Starověké římské hlavní město Dalmácie u Splitu.",
       },
       klisFortress: {
         name: "Pevnost Klis",
-        description: "Středověká pevnost s panoramatickými výhledy na Split",
+        description: "Středověká pevnost s panoramatickými výhledy na Split.",
       },
     },
   },
