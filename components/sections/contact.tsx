@@ -93,7 +93,7 @@ const Contact = () => {
 
   const sendMessage = (type: "whatsapp" | "sms") => {
     const message = `Name: ${messageData.name}\nMessage: ${messageData.message}`;
-    const phoneNumber = "385955039442";
+    const phoneNumber = "385919842510";
 
     if (type === "whatsapp") {
       window.open(
@@ -208,22 +208,22 @@ const Contact = () => {
               <ContactInfo
                 icon={PhoneCall}
                 title={t("contact.info.phone")}
-                content="+385 95 503 9442"
-                link="tel:+385955039442"
+                content="+385 91 984 2510"
+                link="tel:+385919842510"
               />
 
               <ContactInfo
                 icon={MessageSquare}
                 title={t("contact.info.sms")}
-                content="+385 95 503 9442"
-                link="sms:+385955039442"
+                content="+385 91 984 2510"
+                link="sms:+385919842510"
               />
 
               <ContactInfo
                 icon={MessageCircle}
                 title={t("contact.info.whatsapp")}
-                content="+385 95 503 9442"
-                link="https://wa.me/385955039442"
+                content="+385 91 984 2510"
+                link="https://wa.me/385919842510"
               />
 
               <ContactInfo

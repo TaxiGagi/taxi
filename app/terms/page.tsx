@@ -62,7 +62,7 @@ export default function TermsPage() {
                 taksi prijevoz, vl. Josip Gagula, Bibinje, Ulica A. G. Matoša
                 15.
               </p>
-              <p className="mb-4">Kontakt: +385 95 503 9442</p>
+              <p className="mb-4">Kontakt: +385 91 984 2510</p>
             </section>
 
             <section className="mb-8">

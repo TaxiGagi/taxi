@@ -77,7 +77,7 @@ const Fleet = () => {
 
   const sendMessage = (type: "whatsapp" | "sms") => {
     const message = `Hello! I'm interested in booking the ${bookingVehicle} service.`;
-    const phoneNumber = "385955039442";
+    const phoneNumber = "385919842510";
 
     if (type === "whatsapp") {
       window.open(

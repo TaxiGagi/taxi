@@ -73,7 +73,7 @@ const Header = () => {
         {/* Call Button and Language Switcher */}
         <div className="hidden md:flex items-center space-x-4">
           <LanguageSwitcher />
-          <a href="tel:+385955039442">
+          <a href="tel:+385919842510">
             <Button
               variant="default"
               className="bg-amber-400 hover:bg-amber-500 text-black font-semibold"
@@ -126,7 +126,7 @@ const Header = () => {
           <div className="md:hidden py-2 w-fit">
             <LanguageSwitcher />
           </div>
-          <a href="tel:+385955039442" className="md:hidden">
+          <a href="tel:+385919842510" className="md:hidden">
             <Button
               variant="default"
               className="bg-amber-400 hover:bg-amber-500 text-black font-semibold w-full"

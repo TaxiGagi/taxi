@@ -124,10 +124,10 @@ const Footer = () => {
                 <PhoneCall className="h-5 w-5 text-amber-400 mr-3 mt-0.5" />
                 <div>
                   <a
-                    href="tel:+385955039442"
+                    href="tel:+385919842510"
                     className="text-gray-400 hover:text-amber-400"
                   >
-                    +385 95 503 9442
+                    +385 91 984 2510
                   </a>
                 </div>
               </li>
@@ -135,10 +135,10 @@ const Footer = () => {
                 <MessageSquare className="h-5 w-5 text-amber-400 mr-3 mt-0.5" />
                 <div>
                   <a
-                    href="sms:+385955039442"
+                    href="sms:+385919842510"
                     className="text-gray-400 hover:text-amber-400"
                   >
-                    {t("footer.contactLabels.sms")}: +385 95 503 9442
+                    {t("footer.contactLabels.sms")}: +385 91 984 2510
                   </a>
                 </div>
               </li>
@@ -146,12 +146,12 @@ const Footer = () => {
                 <MessageCircle className="h-5 w-5 text-amber-400 mr-3 mt-0.5" />
                 <div>
                   <a
-                    href="https://wa.me/385955039442"
+                    href="https://wa.me/385919842510"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-amber-400"
                   >
-                    {t("footer.contactLabels.whatsapp")}: +385 95 503 9442
+                    {t("footer.contactLabels.whatsapp")}: +385 91 984 2510
                   </a>
                 </div>
               </li>

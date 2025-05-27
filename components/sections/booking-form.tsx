@@ -75,7 +75,7 @@ const BookingForm = () => {
       message += `\nNotes: ${notes}`;
     }
 
-    const phoneNumber = "385955039442";
+    const phoneNumber = "385919842510";
 
     if (type === "whatsapp") {
       window.open(
