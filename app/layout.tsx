@@ -1,37 +1,80 @@
-"use client";
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { I18nProvider } from "@/components/I18nProvider";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const metadata: Metadata = {
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+export const metadata: Metadata = {
   title: "Taxi Gagi",
   description:
-    "Experience premium taxi services with Taxi Gagi. Book your ride now for reliable and comfortable transportation across Dalmatia, from Novalja and Plitvice to Zadar, Split and Dubrovnik.",
+    "Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes. 24/7 airport transfers, city tours, and national park trips. Book now!",
   keywords:
-    "taxi zadar, taxi dalmatia, taxi split, taxi dubrovnik, airport transfer, croatia taxi service",
+    "taxi zadar, taxi dalmatia, taxi split, taxi dubrovnik, airport transfer croatia, zadar taxi service, split airport transfer, dubrovnik taxi, plitvice lakes transfer, novalja taxi, croatia taxi, dalmatia transport, premium taxi croatia, 24/7 taxi service",
+  authors: [{ name: "Taxi Gagi" }],
+  creator: "Taxi Gagi",
+  publisher: "Taxi Gagi",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Taxi Gagi",
+    type: "website",
+    locale: "en_US",
+    url: "https://taxigagi.com/",
+    title: "Taxi Gagi - Premium Taxi Service in Dalmatia",
     description:
-      "Experience premium taxi services with Taxi Gagi. Book your ride now for reliable and comfortable transportation across Dalmatia.",
-    url: "https://taxigagi.com",
+      "Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes. 24/7 airport transfers and tours.",
     siteName: "Taxi Gagi",
     images: [
       {
-        url: "https://images.pexels.com/photos/2399254/pexels-photo-2399254.jpeg",
+        url: "https://taxigagi.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Taxi Gagi Services",
+        alt: "Taxi Gagi - Premium Taxi Service in Dalmatia",
       },
     ],
-    locale: "en_US",
-    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Taxi Gagi - Premium Taxi Service in Dalmatia",
+    description:
+      "Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes.",
+    images: ["https://taxigagi.com/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://taxigagi.com/",
+    languages: {
+      en: "https://taxigagi.com/",
+      hr: "https://taxigagi.com/",
+      de: "https://taxigagi.com/",
+      fr: "https://taxigagi.com/",
+      it: "https://taxigagi.com/",
+      pl: "https://taxigagi.com/",
+      cs: "https://taxigagi.com/",
+      "x-default": "https://taxigagi.com/",
+    },
+  },
+  other: {
+    "geo.region": "HR-17",
+    "geo.placename": "Dalmatia, Croatia",
+    "geo.position": "44.1194;15.2314",
+    ICBM: "44.1194, 15.2314",
   },
 };
 
@@ -139,70 +182,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
-        {/* Primary Meta Tags */}
-        <title>
-          Taxi Gagi - Premium Taxi Service in Dalmatia | Airport Transfers &
-          Tours
-        </title>
-        <meta
-          name="title"
-          content="Taxi Gagi - Premium Taxi Service in Dalmatia | Airport Transfers & Tours"
-        />
-        <meta
-          name="description"
-          content="Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes. 24/7 airport transfers, city tours, and national park trips. Book now!"
-        />
-        <meta
-          name="keywords"
-          content="taxi zadar, taxi dalmatia, taxi split, taxi dubrovnik, airport transfer croatia, zadar taxi service, split airport transfer, dubrovnik taxi, plitvice lakes transfer, novalja taxi, croatia taxi, dalmatia transport, premium taxi croatia, 24/7 taxi service"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
-        <meta name="author" content="Taxi Gagi" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://taxigagi.com/" />
-        <meta
-          property="og:title"
-          content="Taxi Gagi - Premium Taxi Service in Dalmatia | Airport Transfers & Tours"
-        />
-        <meta
-          property="og:description"
-          content="Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes. 24/7 airport transfers and tours."
-        />
-        <meta property="og:site_name" content="Taxi Gagi" />
-        <meta property="og:locale" content="en_US" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://taxigagi.com/" />
-        <meta
-          property="twitter:title"
-          content="Taxi Gagi - Premium Taxi Service in Dalmatia"
-        />
-        <meta
-          property="twitter:description"
-          content="Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes."
-        />
-        <meta
-          property="twitter:image"
-          content="https://taxigagi.com/og-image.jpg"
-        />
-
-        {/* Additional SEO Meta Tags */}
-        <meta name="geo.region" content="HR-17" />
-        <meta name="geo.placename" content="Dalmatia, Croatia" />
-        <meta name="geo.position" content="44.1194;15.2314" />
-        <meta name="ICBM" content="44.1194, 15.2314" />
-
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://taxigagi.com/" />
-
-        {/* Favicon */}
+      <head>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -222,29 +202,13 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
-
-        {/* Additional Language Alternatives */}
-        <link rel="alternate" hrefLang="en" href="https://taxigagi.com/" />
-        <link rel="alternate" hrefLang="hr" href="https://taxigagi.com/" />
-        <link rel="alternate" hrefLang="de" href="https://taxigagi.com/" />
-        <link rel="alternate" hrefLang="fr" href="https://taxigagi.com/" />
-        <link rel="alternate" hrefLang="it" href="https://taxigagi.com/" />
-        <link rel="alternate" hrefLang="pl" href="https://taxigagi.com/" />
-        <link rel="alternate" hrefLang="cs" href="https://taxigagi.com/" />
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://taxigagi.com/"
-        />
-      </Head>
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
