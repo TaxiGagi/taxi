@@ -4,7 +4,7 @@ const hr = {
     chooseMethod: "Odaberite medijski kanal",
     chooseMethodDescription:
       "Odaberite željeni medijski kanal za slanje rezervacije.",
-    whatsapp: "WhatsApp (Preporučeno)",
+    whatsapp: "WhatsApp",
     sms: "SMS",
   },
   nav: {
@@ -38,6 +38,17 @@ const hr = {
     time: "Vrijeme",
     notesPlaceholder: "Dodajte posebne zahtjeve ili napomene...",
     paymentInfo: "Prihvaćamo gotovinu i kartično plaćanje.",
+    validation: {
+      pickupRequired: "Lokacija polaska je obavezna.",
+      pickupMinLength: "Lokacija polaska mora imati najmanje 2 znaka.",
+      destinationRequired: "Odredište je obavezno.",
+      destinationMinLength: "Odredište mora imati najmanje 2 znaka.",
+      destinationSameAsPickup:
+        "Odredište mora biti različito od lokacije polaska.",
+      vehicleTypeRequired: "Molimo odaberite tip vozila.",
+      dateRequired: "Molimo odaberite datum.",
+      timeRequired: "Molimo odaberite vrijeme.",
+    },
     dateDialog: {
       title: "Odaberite datum",
       description: "Odaberite željeni datum putovanja.",

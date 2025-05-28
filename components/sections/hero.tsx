@@ -35,6 +35,13 @@ const Hero = () => {
   const [showNotes, setShowNotes] = useState(false);
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [errors, setErrors] = useState<{
+    pickupLocation?: string;
+    destination?: string;
+    numberOfPersons?: string;
+    selectedDate?: string;
+    selectedTime?: string;
+  }>({});
   const { t } = useTranslation();
 
   // Generate time options in 10-minute intervals
@@ -53,8 +60,61 @@ const Hero = () => {
 
   const timeOptions = generateTimeOptions();
 
+  const validateForm = () => {
+    const newErrors: {
+      pickupLocation?: string;
+      destination?: string;
+      numberOfPersons?: string;
+      selectedDate?: string;
+      selectedTime?: string;
+    } = {};
+
+    // Validate pickup location
+    if (!pickupLocation.trim()) {
+      newErrors.pickupLocation = t("hero.validation.pickupRequired");
+    } else if (pickupLocation.trim().length < 2) {
+      newErrors.pickupLocation = t("hero.validation.pickupMinLength");
+    }
+
+    // Validate destination
+    if (!destination.trim()) {
+      newErrors.destination = t("hero.validation.destinationRequired");
+    } else if (destination.trim().length < 2) {
+      newErrors.destination = t("hero.validation.destinationMinLength");
+    }
+
+    // Validate vehicle type
+    if (!numberOfPersons) {
+      newErrors.numberOfPersons = t("hero.validation.vehicleTypeRequired");
+    }
+
+    // Validate date
+    if (!selectedDate) {
+      newErrors.selectedDate = t("hero.validation.dateRequired");
+    }
+
+    // Validate time
+    if (!selectedTime) {
+      newErrors.selectedTime = t("hero.validation.timeRequired");
+    }
+
+    // Check if pickup and destination are the same
+    if (
+      pickupLocation.trim() &&
+      destination.trim() &&
+      pickupLocation.trim().toLowerCase() === destination.trim().toLowerCase()
+    ) {
+      newErrors.destination = t("hero.validation.destinationSameAsPickup");
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = () => {
-    setIsDialogOpen(true);
+    if (validateForm()) {
+      setIsDialogOpen(true);
+    }
   };
 
   const sendMessage = (type: "whatsapp" | "sms") => {
@@ -98,12 +158,28 @@ const Hero = () => {
     setNumberOfPersons("");
     setNotes("");
     setShowNotes(false);
+    setErrors({});
   };
 
   return (
     <section
       id="home"
       className="relative h-screen min-h-[700px] flex items-center justify-center bg-black"
+      style={{
+        marginBottom:
+          window.innerWidth >= 410
+            ? `${Math.max(
+                0,
+                Math.max(
+                  Object.entries(errors).filter(([, value]) => value).length,
+                  1
+                ) *
+                  1.5 +
+                  (showNotes ? 7.5 : 0) -
+                  8.5
+              )}rem`
+            : "0rem",
+      }}
     >
       <Image
         src="/images/hero.jpg"
@@ -115,7 +191,21 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-      <div className="container mx-auto px-10 lg:px-20 relative z-20 pb-10 xs:pt-20">
+      <div
+        className="container mx-auto px-10 lg:px-20 relative z-20 pb-10"
+        style={{
+          paddingTop:
+            window.innerWidth >= 410
+              ? `${
+                  (showNotes ? 7.5 : 0) +
+                  5 +
+                  (Object.entries(errors).filter(([, value]) => value).length -
+                    (errors.selectedDate && errors.selectedTime ? 1 : 0)) *
+                    1.5
+                }rem`
+              : "5rem",
+        }}
+      >
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div
             className="lg:w-1/2 text-center lg:text-left text-white"
@@ -187,10 +277,27 @@ const Hero = () => {
                   <input
                     type="text"
                     placeholder={t("hero.pickupLocation")}
-                    className="w-full pl-10 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 placeholder:text-gray-500"
+                    className={`w-full pl-10 py-3 border rounded-md focus:outline-none focus:ring-2 placeholder:text-gray-500 ${
+                      errors.pickupLocation
+                        ? "border-red-500 focus:ring-red-400"
+                        : "border-gray-300 focus:ring-amber-400"
+                    }`}
                     value={pickupLocation}
-                    onChange={(e) => setPickupLocation(e.target.value)}
+                    onChange={(e) => {
+                      setPickupLocation(e.target.value);
+                      if (errors.pickupLocation) {
+                        setErrors((prev) => ({
+                          ...prev,
+                          pickupLocation: undefined,
+                        }));
+                      }
+                    }}
                   />
+                  {errors.pickupLocation && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.pickupLocation}
+                    </p>
+                  )}
                 </div>
 
                 <div className="relative">
@@ -198,20 +305,47 @@ const Hero = () => {
                   <input
                     type="text"
                     placeholder={t("hero.destination")}
-                    className="w-full pl-10 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 placeholder:text-gray-500"
+                    className={`w-full pl-10 py-3 border rounded-md focus:outline-none focus:ring-2 placeholder:text-gray-500 ${
+                      errors.destination
+                        ? "border-red-500 focus:ring-red-400"
+                        : "border-gray-300 focus:ring-amber-400"
+                    }`}
                     value={destination}
-                    onChange={(e) => setDestination(e.target.value)}
+                    onChange={(e) => {
+                      setDestination(e.target.value);
+                      if (errors.destination) {
+                        setErrors((prev) => ({
+                          ...prev,
+                          destination: undefined,
+                        }));
+                      }
+                    }}
                   />
+                  {errors.destination && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.destination}
+                    </p>
+                  )}
                 </div>
 
                 <div className="relative">
                   <Users className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                   <select
                     value={numberOfPersons}
-                    onChange={(e) => setNumberOfPersons(e.target.value)}
-                    className={`w-full pl-10 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white appearance-none cursor-pointer ${
-                      !numberOfPersons ? "text-gray-500" : "text-black"
-                    }`}
+                    onChange={(e) => {
+                      setNumberOfPersons(e.target.value);
+                      if (errors.numberOfPersons) {
+                        setErrors((prev) => ({
+                          ...prev,
+                          numberOfPersons: undefined,
+                        }));
+                      }
+                    }}
+                    className={`w-full pl-10 py-3 border rounded-md focus:outline-none focus:ring-2 bg-white appearance-none cursor-pointer ${
+                      errors.numberOfPersons
+                        ? "border-red-500 focus:ring-red-400"
+                        : "border-gray-300 focus:ring-amber-400"
+                    } ${!numberOfPersons ? "text-gray-500" : "text-black"}`}
                   >
                     <option value="">{t("hero.selectVehicleType")}</option>
                     <option value={t("hero.vehicleOptions.sedan")}>
@@ -224,40 +358,71 @@ const Hero = () => {
                       {t("hero.vehicleOptions.shuttle")}
                     </option>
                   </select>
+                  {errors.numberOfPersons && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.numberOfPersons}
+                    </p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="relative">
-                    <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <button
-                      type="button"
-                      onClick={() => setIsDatePickerOpen(true)}
-                      className={`w-full pl-10 pr-1 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 text-left bg-white ${
-                        !selectedDate ? "text-gray-500" : "text-black"
-                      }`}
-                    >
-                      {selectedDate
-                        ? selectedDate.toLocaleDateString()
-                        : t("hero.date")}
-                    </button>
+                  <div>
+                    <div className="relative">
+                      <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                      <button
+                        type="button"
+                        onClick={() => setIsDatePickerOpen(true)}
+                        className={`w-full pl-10 pr-1 py-3 border rounded-md focus:outline-none focus:ring-2 text-left bg-white ${
+                          errors.selectedDate
+                            ? "border-red-500 focus:ring-red-400"
+                            : "border-gray-300 focus:ring-amber-400"
+                        } ${!selectedDate ? "text-gray-500" : "text-black"}`}
+                      >
+                        {selectedDate
+                          ? selectedDate.toLocaleDateString()
+                          : t("hero.date")}
+                      </button>
+                    </div>
+                    {errors.selectedDate && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.selectedDate}
+                      </p>
+                    )}
                   </div>
 
-                  <div className="relative">
-                    <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none z-10" />
-                    <select
-                      value={selectedTime}
-                      onChange={(e) => setSelectedTime(e.target.value)}
-                      className={`w-full pl-10 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white appearance-none cursor-pointer ${
-                        !selectedTime ? "text-gray-500" : "text-black"
-                      }`}
-                    >
-                      <option value="">{t("hero.time")}</option>
-                      {timeOptions.map((time) => (
-                        <option key={time} value={time}>
-                          {time}
-                        </option>
-                      ))}
-                    </select>
+                  <div>
+                    <div className="relative">
+                      <Clock className="absolute left-3 top-3 h-5 w-5 text-gray-400 pointer-events-none z-10" />
+                      <select
+                        value={selectedTime}
+                        onChange={(e) => {
+                          setSelectedTime(e.target.value);
+                          if (errors.selectedTime) {
+                            setErrors((prev) => ({
+                              ...prev,
+                              selectedTime: undefined,
+                            }));
+                          }
+                        }}
+                        className={`w-full pl-10 py-3 border rounded-md focus:outline-none focus:ring-2 bg-white appearance-none cursor-pointer ${
+                          errors.selectedTime
+                            ? "border-red-500 focus:ring-red-400"
+                            : "border-gray-300 focus:ring-amber-400"
+                        } ${!selectedTime ? "text-gray-500" : "text-black"}`}
+                      >
+                        <option value="">{t("hero.time")}</option>
+                        {timeOptions.map((time) => (
+                          <option key={time} value={time}>
+                            {time}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    {errors.selectedTime && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.selectedTime}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -308,6 +473,12 @@ const Hero = () => {
               onSelect={(date) => {
                 setSelectedDate(date);
                 setIsDatePickerOpen(false);
+                if (errors.selectedDate) {
+                  setErrors((prev) => ({
+                    ...prev,
+                    selectedDate: undefined,
+                  }));
+                }
               }}
               disabled={{ before: new Date() }}
               className="rdp"

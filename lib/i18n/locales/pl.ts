@@ -4,7 +4,7 @@ const pl = {
     chooseMethod: "Wybierz metodę",
     chooseMethodDescription:
       "Wybierz preferowany sposób wysłania żądania rezerwacji.",
-    whatsapp: "WhatsApp (Zalecane)",
+    whatsapp: "WhatsApp",
     sms: "SMS",
   },
   nav: {
@@ -38,6 +38,17 @@ const pl = {
     time: "Godzina",
     notesPlaceholder: "Dodaj specjalne życzenia lub notatki...",
     paymentInfo: "Akceptujemy płatności gotówką i kartą.",
+    validation: {
+      pickupRequired: "Miejsce odbioru jest wymagane.",
+      pickupMinLength: "Miejsce odbioru musi mieć co najmniej 2 znaki.",
+      destinationRequired: "Miejsce docelowe jest wymagane.",
+      destinationMinLength: "Miejsce docelowe musi mieć co najmniej 2 znaki.",
+      destinationSameAsPickup:
+        "Miejsce docelowe musi być inne niż miejsce odbioru.",
+      vehicleTypeRequired: "Proszę wybrać typ pojazdu.",
+      dateRequired: "Proszę wybrać datę.",
+      timeRequired: "Proszę wybrać godzinę.",
+    },
     dateDialog: {
       title: "Wybierz Datę",
       description: "Wybierz preferowaną datę podróży.",

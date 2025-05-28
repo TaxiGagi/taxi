@@ -230,7 +230,7 @@ const Contact = () => {
                 icon={Store}
                 title={t("contact.info.business")}
                 content={t("contact.viewProfile")}
-                link="https://g.page/your-business"
+                link="https://g.co/kgs/W2D1iru"
               />
 
               <ContactInfo

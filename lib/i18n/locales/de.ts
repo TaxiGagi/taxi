@@ -4,7 +4,7 @@ const de = {
     chooseMethod: "Nachrichtenmethode wählen",
     chooseMethodDescription:
       "Wählen Sie Ihre bevorzugte Art der Buchungsanfrage.",
-    whatsapp: "WhatsApp (Empfohlen)",
+    whatsapp: "WhatsApp",
     sms: "SMS",
   },
   nav: {
@@ -38,6 +38,16 @@ const de = {
     time: "Zeit",
     notesPlaceholder: "Besondere Wünsche oder Notizen hinzufügen...",
     paymentInfo: "Wir akzeptieren Bar- und Kartenzahlung.",
+    validation: {
+      pickupRequired: "Abholort ist erforderlich.",
+      pickupMinLength: "Abholort muss mindestens 2 Zeichen haben.",
+      destinationRequired: "Zielort ist erforderlich.",
+      destinationMinLength: "Zielort muss mindestens 2 Zeichen haben.",
+      destinationSameAsPickup: "Zielort muss sich vom Abholort unterscheiden.",
+      vehicleTypeRequired: "Bitte wählen Sie einen Fahrzeugtyp.",
+      dateRequired: "Bitte wählen Sie ein Datum.",
+      timeRequired: "Bitte wählen Sie eine Uhrzeit.",
+    },
     dateDialog: {
       title: "Datum wählen",
       description: "Wählen Sie Ihr bevorzugtes Reisedatum.",

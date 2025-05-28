@@ -4,7 +4,7 @@ const cs = {
     chooseMethod: "Vyberte způsob",
     chooseMethodDescription:
       "Vyberte preferovaný způsob odeslání žádosti o rezervaci.",
-    whatsapp: "WhatsApp (Doporučeno)",
+    whatsapp: "WhatsApp",
     sms: "SMS",
   },
   nav: {
@@ -38,6 +38,16 @@ const cs = {
     time: "Čas",
     notesPlaceholder: "Přidejte speciální požadavky nebo poznámky...",
     paymentInfo: "Přijímáme platby v hotovosti i kartou.",
+    validation: {
+      pickupRequired: "Místo vyzvednutí je povinné.",
+      pickupMinLength: "Místo vyzvednutí musí mít alespoň 2 znaky.",
+      destinationRequired: "Cíl cesty je povinný.",
+      destinationMinLength: "Cíl cesty musí mít alespoň 2 znaky.",
+      destinationSameAsPickup: "Cíl cesty musí být jiný než místo vyzvednutí.",
+      vehicleTypeRequired: "Prosím vyberte typ vozidla.",
+      dateRequired: "Prosím vyberte datum.",
+      timeRequired: "Prosím vyberte čas.",
+    },
     dateDialog: {
       title: "Vyberte Datum",
       description: "Vyberte preferované datum cesty.",

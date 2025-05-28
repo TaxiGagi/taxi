@@ -4,7 +4,7 @@ const it = {
     chooseMethod: "Scegli metodo",
     chooseMethodDescription:
       "Seleziona il tuo metodo preferito per inviare la richiesta di prenotazione.",
-    whatsapp: "WhatsApp (Consigliato)",
+    whatsapp: "WhatsApp",
     sms: "SMS",
   },
   nav: {
@@ -38,6 +38,17 @@ const it = {
     time: "Ora",
     notesPlaceholder: "Aggiungi richieste speciali o note...",
     paymentInfo: "Accettiamo pagamenti in contanti e con carta.",
+    validation: {
+      pickupRequired: "Il luogo di ritiro è obbligatorio.",
+      pickupMinLength: "Il luogo di ritiro deve avere almeno 2 caratteri.",
+      destinationRequired: "La destinazione è obbligatoria.",
+      destinationMinLength: "La destinazione deve avere almeno 2 caratteri.",
+      destinationSameAsPickup:
+        "La destinazione deve essere diversa dal luogo di ritiro.",
+      vehicleTypeRequired: "Seleziona un tipo di veicolo.",
+      dateRequired: "Seleziona una data.",
+      timeRequired: "Seleziona un orario.",
+    },
     dateDialog: {
       title: "Seleziona Data",
       description: "Scegli la tua data di viaggio preferita.",

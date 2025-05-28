@@ -159,7 +159,7 @@ const Footer = () => {
                 <Store className="h-5 w-5 text-amber-400 mr-3 mt-0.5" />
                 <div>
                   <a
-                    href="https://g.page/your-business"
+                    href="https://g.co/kgs/W2D1iru"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-amber-400"

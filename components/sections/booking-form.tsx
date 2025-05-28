@@ -34,6 +34,13 @@ const BookingForm = () => {
   const [showNotes, setShowNotes] = useState(false);
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [errors, setErrors] = useState<{
+    pickupLocation?: string;
+    destination?: string;
+    numberOfPersons?: string;
+    selectedDate?: string;
+    selectedTime?: string;
+  }>({});
   const { t } = useTranslation();
 
   // Generate time options in 10-minute intervals
@@ -52,8 +59,61 @@ const BookingForm = () => {
 
   const timeOptions = generateTimeOptions();
 
+  const validateForm = () => {
+    const newErrors: {
+      pickupLocation?: string;
+      destination?: string;
+      numberOfPersons?: string;
+      selectedDate?: string;
+      selectedTime?: string;
+    } = {};
+
+    // Validate pickup location
+    if (!pickupLocation.trim()) {
+      newErrors.pickupLocation = t("hero.validation.pickupRequired");
+    } else if (pickupLocation.trim().length < 2) {
+      newErrors.pickupLocation = t("hero.validation.pickupMinLength");
+    }
+
+    // Validate destination
+    if (!destination.trim()) {
+      newErrors.destination = t("hero.validation.destinationRequired");
+    } else if (destination.trim().length < 2) {
+      newErrors.destination = t("hero.validation.destinationMinLength");
+    }
+
+    // Validate vehicle type
+    if (!numberOfPersons) {
+      newErrors.numberOfPersons = t("hero.validation.vehicleTypeRequired");
+    }
+
+    // Validate date
+    if (!selectedDate) {
+      newErrors.selectedDate = t("hero.validation.dateRequired");
+    }
+
+    // Validate time
+    if (!selectedTime) {
+      newErrors.selectedTime = t("hero.validation.timeRequired");
+    }
+
+    // Check if pickup and destination are the same
+    if (
+      pickupLocation.trim() &&
+      destination.trim() &&
+      pickupLocation.trim().toLowerCase() === destination.trim().toLowerCase()
+    ) {
+      newErrors.destination = t("hero.validation.destinationSameAsPickup");
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = () => {
-    setIsDialogOpen(true);
+    if (validateForm()) {
+      setIsDialogOpen(true);
+    }
   };
 
   const sendMessage = (type: "whatsapp" | "sms") => {
@@ -97,6 +157,7 @@ const BookingForm = () => {
     setNumberOfPersons("");
     setNotes("");
     setShowNotes(false);
+    setErrors({});
   };
 
   return (
@@ -143,10 +204,27 @@ const BookingForm = () => {
                 <input
                   type="text"
                   placeholder={t("hero.pickupLocation")}
-                  className="w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 placeholder:text-gray-500 text-sm xs:text-base"
+                  className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border rounded-md focus:outline-none focus:ring-2 placeholder:text-gray-500 text-sm xs:text-base ${
+                    errors.pickupLocation
+                      ? "border-red-500 focus:ring-red-400"
+                      : "border-gray-300 focus:ring-amber-400"
+                  }`}
                   value={pickupLocation}
-                  onChange={(e) => setPickupLocation(e.target.value)}
+                  onChange={(e) => {
+                    setPickupLocation(e.target.value);
+                    if (errors.pickupLocation) {
+                      setErrors((prev) => ({
+                        ...prev,
+                        pickupLocation: undefined,
+                      }));
+                    }
+                  }}
                 />
+                {errors.pickupLocation && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.pickupLocation}
+                  </p>
+                )}
               </div>
 
               <div className="relative">
@@ -154,20 +232,47 @@ const BookingForm = () => {
                 <input
                   type="text"
                   placeholder={t("hero.destination")}
-                  className="w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 placeholder:text-gray-500 text-sm xs:text-base"
+                  className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border rounded-md focus:outline-none focus:ring-2 placeholder:text-gray-500 text-sm xs:text-base ${
+                    errors.destination
+                      ? "border-red-500 focus:ring-red-400"
+                      : "border-gray-300 focus:ring-amber-400"
+                  }`}
                   value={destination}
-                  onChange={(e) => setDestination(e.target.value)}
+                  onChange={(e) => {
+                    setDestination(e.target.value);
+                    if (errors.destination) {
+                      setErrors((prev) => ({
+                        ...prev,
+                        destination: undefined,
+                      }));
+                    }
+                  }}
                 />
+                {errors.destination && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.destination}
+                  </p>
+                )}
               </div>
 
               <div className="relative">
                 <Users className="absolute left-3 top-3 h-4 xs:h-5 w-4 xs:w-5 text-gray-400" />
                 <select
                   value={numberOfPersons}
-                  onChange={(e) => setNumberOfPersons(e.target.value)}
-                  className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white appearance-none cursor-pointer text-sm xs:text-base ${
-                    !numberOfPersons ? "text-gray-500" : "text-black"
-                  }`}
+                  onChange={(e) => {
+                    setNumberOfPersons(e.target.value);
+                    if (errors.numberOfPersons) {
+                      setErrors((prev) => ({
+                        ...prev,
+                        numberOfPersons: undefined,
+                      }));
+                    }
+                  }}
+                  className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border rounded-md focus:outline-none focus:ring-2 bg-white appearance-none cursor-pointer text-sm xs:text-base ${
+                    errors.numberOfPersons
+                      ? "border-red-500 focus:ring-red-400"
+                      : "border-gray-300 focus:ring-amber-400"
+                  } ${!numberOfPersons ? "text-gray-500" : "text-black"}`}
                 >
                   <option value="">{t("hero.selectVehicleType")}</option>
                   <option value={t("hero.vehicleOptions.sedan")}>
@@ -180,40 +285,71 @@ const BookingForm = () => {
                     {t("hero.vehicleOptions.shuttle")}
                   </option>
                 </select>
+                {errors.numberOfPersons && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.numberOfPersons}
+                  </p>
+                )}
               </div>
 
               <div className="grid grid-cols-2 gap-2 xs:gap-4">
-                <div className="relative">
-                  <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 xs:h-5 w-4 xs:w-5 text-gray-400" />
-                  <button
-                    type="button"
-                    onClick={() => setIsDatePickerOpen(true)}
-                    className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 text-left bg-white text-xs xs:text-base ${
-                      !selectedDate ? "text-gray-500" : "text-black"
-                    }`}
-                  >
-                    {selectedDate
-                      ? selectedDate.toLocaleDateString()
-                      : t("hero.date")}
-                  </button>
+                <div>
+                  <div className="relative">
+                    <Calendar className="absolute left-3 top-3 h-4 xs:h-5 w-4 xs:w-5 text-gray-400" />
+                    <button
+                      type="button"
+                      onClick={() => setIsDatePickerOpen(true)}
+                      className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border rounded-md focus:outline-none focus:ring-2 text-left bg-white text-xs xs:text-base ${
+                        errors.selectedDate
+                          ? "border-red-500 focus:ring-red-400"
+                          : "border-gray-300 focus:ring-amber-400"
+                      } ${!selectedDate ? "text-gray-500" : "text-black"}`}
+                    >
+                      {selectedDate
+                        ? selectedDate.toLocaleDateString()
+                        : t("hero.date")}
+                    </button>
+                  </div>
+                  {errors.selectedDate && (
+                    <p className="mt-1 text-xs text-red-600">
+                      {errors.selectedDate}
+                    </p>
+                  )}
                 </div>
 
-                <div className="relative">
-                  <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 xs:h-5 w-4 xs:w-5 text-gray-400 pointer-events-none z-10" />
-                  <select
-                    value={selectedTime}
-                    onChange={(e) => setSelectedTime(e.target.value)}
-                    className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white appearance-none cursor-pointer text-xs xs:text-base ${
-                      !selectedTime ? "text-gray-500" : "text-black"
-                    }`}
-                  >
-                    <option value="">{t("hero.time")}</option>
-                    {timeOptions.map((time) => (
-                      <option key={time} value={time}>
-                        {time}
-                      </option>
-                    ))}
-                  </select>
+                <div>
+                  <div className="relative">
+                    <Clock className="absolute left-3 top-3 h-4 xs:h-5 w-4 xs:w-5 text-gray-400 pointer-events-none z-10" />
+                    <select
+                      value={selectedTime}
+                      onChange={(e) => {
+                        setSelectedTime(e.target.value);
+                        if (errors.selectedTime) {
+                          setErrors((prev) => ({
+                            ...prev,
+                            selectedTime: undefined,
+                          }));
+                        }
+                      }}
+                      className={`w-full pl-9 xs:pl-10 py-2.5 xs:py-3 border rounded-md focus:outline-none focus:ring-2 bg-white appearance-none cursor-pointer text-xs xs:text-base ${
+                        errors.selectedTime
+                          ? "border-red-500 focus:ring-red-400"
+                          : "border-gray-300 focus:ring-amber-400"
+                      } ${!selectedTime ? "text-gray-500" : "text-black"}`}
+                    >
+                      <option value="">{t("hero.time")}</option>
+                      {timeOptions.map((time) => (
+                        <option key={time} value={time}>
+                          {time}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  {errors.selectedTime && (
+                    <p className="mt-1 text-xs text-red-600">
+                      {errors.selectedTime}
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -263,6 +399,12 @@ const BookingForm = () => {
               onSelect={(date) => {
                 setSelectedDate(date);
                 setIsDatePickerOpen(false);
+                if (errors.selectedDate) {
+                  setErrors((prev) => ({
+                    ...prev,
+                    selectedDate: undefined,
+                  }));
+                }
               }}
               disabled={{ before: new Date() }}
               className="rdp"
