@@ -148,7 +148,10 @@ const it = {
   testimonials: {
     title: "Cosa dicono i nostri clienti",
     subtitle:
-      "Non credere solo alla nostra parola - ascolta i nostri clienti soddisfatti parlare della loro esperienza con il nostro servizio taxi.",
+      "Leggi le recensioni dei nostri clienti soddisfatti sulla loro esperienza con il nostro servizio taxi.",
+    roles: {
+      tourist: "Turista",
+    },
   },
   destinations: {
     title: "Scopri la Dalmazia",

@@ -142,9 +142,12 @@ const hr = {
     },
   },
   testimonials: {
-    title: "Što kažu naši kupci",
+    title: "Što kažu naši klijenti",
     subtitle:
-      "Ne vjerujte samo nama na riječ - čujte od naših zadovoljnih kupaca o njihovom iskustvu s našom taxi uslugom.",
+      "Saznajte što naši klijenti kažu o iskustvu s našom taxi službom.",
+    roles: {
+      tourist: "Turist",
+    },
   },
   destinations: {
     title: "Otkrijte Dalmaciju",

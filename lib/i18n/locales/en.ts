@@ -143,9 +143,12 @@ const en = {
     },
   },
   testimonials: {
-    title: "What Our Customers Say",
+    title: "What Our Clients Say",
     subtitle:
-      "Don't just take our word for it - hear from our satisfied customers about their experience with our taxi service.",
+      "Read reviews from our satisfied clients about their experience with our taxi service.",
+    roles: {
+      tourist: "Tourist",
+    },
   },
   destinations: {
     title: "Discover Dalmatia",

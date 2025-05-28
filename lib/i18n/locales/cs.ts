@@ -142,9 +142,12 @@ const cs = {
     },
   },
   testimonials: {
-    title: "Co říkají naši zákazníci",
+    title: "Co říkají naši klienti",
     subtitle:
-      "Nevěřte jen našim slovům - poslechněte si, co říkají naši spokojení zákazníci o zkušenostech s naší taxislužbou.",
+      "Přečtěte si recenze našich spokojených klientů o jejich zkušenostech s naší taxislužbou.",
+    roles: {
+      tourist: "Turista",
+    },
   },
   destinations: {
     title: "Objevte Dalmácii",

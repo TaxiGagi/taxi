@@ -147,7 +147,10 @@ const pl = {
   testimonials: {
     title: "Co mówią nasi klienci",
     subtitle:
-      "Nie wierz tylko nam na słowo - posłuchaj naszych zadowolonych klientów o ich doświadczeniu z naszym serwisem taxi.",
+      "Przeczytaj opinie naszych zadowolonych klientów o ich doświadczeniu z naszym serwisem taxi.",
+    roles: {
+      tourist: "Turysta",
+    },
   },
   destinations: {
     title: "Odkryj Dalmację",

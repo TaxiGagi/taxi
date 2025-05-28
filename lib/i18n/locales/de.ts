@@ -146,7 +146,10 @@ const de = {
   testimonials: {
     title: "Was unsere Kunden sagen",
     subtitle:
-      "Glauben Sie nicht nur uns - hören Sie von unseren zufriedenen Kunden über ihre Erfahrungen mit unserem Taxiservice.",
+      "Lesen Sie Bewertungen unserer zufriedenen Kunden über ihre Erfahrungen mit unserem Taxiservice.",
+    roles: {
+      tourist: "Tourist",
+    },
   },
   destinations: {
     title: "Entdecken Sie Dalmatien",
