@@ -104,16 +104,3 @@
   opacity: var(--animate-opacity, 1) !important;
   transform: var(--animate-transform, none) !important;
 }
-
-/* Leaflet styles */
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.service-area-polygon {
-  fill: rgba(251, 191, 36, 0.2);
-  stroke: #f59e0b;
-  stroke-width: 2;
-}

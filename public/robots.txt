@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://taxigagi.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Block access to admin or sensitive areas (if any)
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow access to CSS and JS files for proper rendering
+User-agent: *
+Allow: /_next/static/
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js 

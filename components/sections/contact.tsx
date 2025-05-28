@@ -11,17 +11,6 @@ import {
   Clock,
   MessageCircle,
 } from "lucide-react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import {
   Dialog,
   DialogContent,
@@ -30,13 +19,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  message: z
-    .string()
-    .min(10, { message: "Message must be at least 10 characters." }),
-});
 
 const ContactInfo = ({
   icon: Icon,
@@ -76,23 +58,44 @@ const ContactInfo = ({
 const Contact = () => {
   const { t } = useTranslation();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [messageData, setMessageData] = useState({ name: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", message: "" });
+  const [errors, setErrors] = useState({ name: "", message: "" });
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      message: "",
-    },
-  });
+  const validateForm = () => {
+    const newErrors = { name: "", message: "" };
+    let isValid = true;
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    setMessageData(values);
-    setIsDialogOpen(true);
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleInputChange = (field: "name" | "message", value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: "" }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      setIsDialogOpen(true);
+    }
   };
 
   const sendMessage = (type: "whatsapp" | "sms") => {
-    const message = `Name: ${messageData.name}\nMessage: ${messageData.message}`;
+    const message = `Name: ${formData.name}\nMessage: ${formData.message}`;
     const phoneNumber = "385919842510";
 
     if (type === "whatsapp") {
@@ -108,7 +111,8 @@ const Contact = () => {
     }
 
     setIsDialogOpen(false);
-    form.reset();
+    setFormData({ name: "", message: "" });
+    setErrors({ name: "", message: "" });
   };
 
   return (
@@ -143,56 +147,50 @@ const Contact = () => {
               {t("contact.sendMessage")}
             </h3>
 
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6"
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  {t("contact.form.name")}
+                </label>
+                <input
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange("name", e.target.value)}
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 ${
+                    errors.name ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder={t("contact.form.namePlaceholder")}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  {t("contact.form.message")}
+                </label>
+                <Textarea
+                  value={formData.message}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
+                  className={`min-h-[120px] ${
+                    errors.message ? "border-red-500" : ""
+                  }`}
+                  placeholder={t("contact.form.messagePlaceholder")}
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-amber-400 hover:bg-amber-500 text-black font-semibold"
+                size="lg"
               >
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t("contact.form.name")}</FormLabel>
-                      <FormControl>
-                        <input
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
-                          placeholder={t("contact.form.namePlaceholder")}
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t("contact.form.message")}</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder={t("contact.form.messagePlaceholder")}
-                          className="min-h-[120px]"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  className="w-full bg-amber-400 hover:bg-amber-500 text-black font-semibold"
-                  size="lg"
-                >
-                  {t("contact.form.send")}
-                </Button>
-              </form>
-            </Form>
+                {t("contact.form.send")}
+              </Button>
+            </form>
           </motion.div>
 
           <motion.div
@@ -251,14 +249,18 @@ const Contact = () => {
               {t("contact.dialog.description")}
             </DialogDescription>
           </DialogHeader>
-          <div className="grid grid-cols-2 gap-4 mt-4">
+          <div className="flex flex-col xs:flex-row gap-3 mt-4">
             <Button
               onClick={() => sendMessage("whatsapp")}
-              className="bg-green-500 hover:bg-green-600 text-white"
+              className="bg-green-500 hover:bg-green-600 text-white flex-1 text-sm xs:text-base px-3 py-2"
             >
               {t("common.whatsapp")}
             </Button>
-            <Button onClick={() => sendMessage("sms")} variant="outline">
+            <Button
+              onClick={() => sendMessage("sms")}
+              variant="outline"
+              className="flex-1 text-sm xs:text-base px-3 py-2"
+            >
               {t("common.sms")}
             </Button>
           </div>
