@@ -57,13 +57,13 @@ const hr = {
   about: {
     title: "Vaš pouzdani taksi partner",
     description:
-      "Taxi Gagi je profesionalna taksi služba iz Zadra koja pruža usluge prijevoza diljem Dalmacije. S godinama iskustva predani smo pružanju udobne i pouzdane usluge kako domaćim tako i stranim posjetiteljima.",
+      "Taxi Gagi profesionalna je taksi služba iz Zadra koja pruža usluge prijevoza diljem Dalmacije. S godinama iskustva predani smo pružanju udobne i pouzdane usluge, kako domaćim tako i stranim posjetiteljima.",
     paragraph1:
-      "Usluge primarno nudimo u Zadaru i okolnim područjima, s fleksibilnošću vožnje do odredišta diljem Hrvatske — od obalnih gradova poput Novalje, Dubrovnika ili Splita, do unutrašnjih lokacija poput Plitvičkih jezera, pa sve do Zagrebačke zračne luke.",
+      "Usluge primarno nudimo u Zadaru i okolnim područjima s fleksibilnošću vožnje do odredišta diljem Hrvatske — od obalnih gradova poput Novalje, Dubrovnika ili Splita, do unutrašnjih lokacija poput Plitvičkih jezera, pa sve do Zagrebačke zračne luke.",
     paragraph2:
-      "Bilo da trebate lokalni transfer ili vožnju na dugu udaljenost, spremni smo kad god trebate. U ponudi imamo standardne taksije ali i ekskluzivna vozila, pružajući vam opciju putovanja po pristupačnoj cijeni ili u dodatnoj udobnosti i stilu. Za veće grupe, nudimo prijevoz do 7 putnika u jednom vozilu, idealno za obitelji, male turističke grupe ili transfere do zračne luke.",
+      "Bilo da trebate lokalni transfer ili vožnju na dužu udaljenost, spremni smo kad god trebate. U ponudi imamo standardne taksije, ali i ekskluzivna vozila, pružajući vam opciju putovanja po pristupačnoj cijeni ili u dodatnoj udobnosti i stilu. Za veće grupe nudimo prijevoz do 7 putnika u jednom vozilu, idealno za obitelji, male turističke grupe ili transfere do zračne luke.",
     paragraph3:
-      "Osim redovitih taksi usluga, Taxi Gagi također organizira privatne izlete i transfere do poznatih nacionalnih i prirodnih parkova, uključujući Krku, Paklenicu, Plitvička jezera, te ostalih turističkih destinacija. Ovi obilasci mogu biti prilagođeni vašem rasporedu, osiguravajući fleksibilno i ugodno iskustvo.",
+      "Osim redovitih taksi usluga, Taxi Gagi također organizira privatne izlete i transfere do poznatih nacionalnih i parkova prirode, uključujući Krku, Paklenicu, Plitvička jezera, te ostalih turističkih destinacija. Ovi obilasci mogu biti prilagođeni vašem rasporedu, osiguravajući fleksibilno i ugodno iskustvo.",
   },
   fleet: {
     title: "Naša vozila",

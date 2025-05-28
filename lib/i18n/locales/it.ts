@@ -59,7 +59,7 @@ const it = {
     description:
       "Benvenuti in Taxi Gagi, il vostro servizio di trasporto di prima classe nella bellissima regione della Dalmazia. Con anni di esperienza nel servire residenti e turisti, ci siamo affermati come un servizio taxi affidabile e professionale che copre tutta la costa dalmata.",
     paragraph1:
-      "Dalle strade storiche di Zara alla vivace città di Spalato, dai magnifici laghi di Plitvice alla perla dell'Adriatico - Dubrovnik, il nostro servizio copre tutte le principali destinazioni della regione.",
+      "Dalle strade storiche di Zara alla vivace città di Spalato, dai magnifici laghi di Plitvice fino alla perla dell'Adriatico - Dubrovnik, il nostro servizio copre tutte le principali destinazioni della regione.",
     paragraph2:
       "Siamo orgogliosi di offrire servizi di trasporto confortevoli, puntuali e sicuri che soddisfano tutte le vostre esigenze di viaggio.",
     paragraph3:
