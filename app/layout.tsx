@@ -174,13 +174,6 @@ export default function RootLayout({
           property="og:description"
           content="Experience premium taxi services with Taxi Gagi. Reliable transportation across Dalmatia - Zadar, Split, Dubrovnik, Novalja, Plitvice Lakes. 24/7 airport transfers and tours."
         />
-        <meta property="og:image" content="https://taxigagi.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="og:image:alt"
-          content="Taxi Gagi - Premium Taxi Service in Dalmatia"
-        />
         <meta property="og:site_name" content="Taxi Gagi" />
         <meta property="og:locale" content="en_US" />
 
